@@ -14,3 +14,8 @@ Spotify API: https://developer.spotify.com/documentation/web-api/reference/get-a
 Here is an example of us using Postman to access Spotify's new releases: 
 
 ![image](https://github.com/mehtab0301/group-project/assets/63558865/58ece134-f351-40a4-9e27-96d02ee98a1a)
+
+Here is an example of us running the Java code to access Spotify's API:
+
+![image](https://github.com/mehtab0301/group-project/assets/63558865/4227da1f-f759-4671-ae19-7d7fefe563e4)
+
