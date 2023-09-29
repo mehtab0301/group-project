@@ -8,3 +8,9 @@ The second idea will be to create a playlist based on a prompt a user inputs. Fo
 This second idea will also allow the user to create an Apple Music playlist by accessing the Spotify API to find songs, and just compiling them into an Apple playlist. 
 
 We are still deciding on further ideas to include on the website, but for now, we believe this is a solid website idea that will attract users to our website. Aside from other nice features, we could add specifically for music streaming platforms, we are also looking into possibly building a machine learning algorithm that would allow us to convert musical notation written on paper into a digital format. This is tentative and depending on the complexity + specific instructions on the project, we may or may not develop it. 
+
+Spotify API: https://developer.spotify.com/documentation/web-api/reference/get-an-artists-albums 
+
+Here is an example of us using Postman to access Spotify's new releases: 
+
+![image](https://github.com/mehtab0301/group-project/assets/63558865/58ece134-f351-40a4-9e27-96d02ee98a1a)
