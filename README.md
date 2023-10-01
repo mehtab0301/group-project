@@ -23,9 +23,9 @@ Spotify API-2: https://developer.spotify.com/documentation/web-api/reference/get
 
 Here is another example of us using Postman to access a Spotify user's playlists:
 
-![image](SpotifyAPIGetPlaylists.png)
+![image](SpotifyAPIGetPlaylists/SpotifyAPIGetPlaylists.png)
 
 Here is the sample output of calling the Spotify API based on token generated via PostMan:
 
-![image](SampleOutput.png)
+![image](SpotifyAPIGetPlaylists/SampleOutput.png)
 [Link to Sample Output File](https://github.com/mehtab0301/group-project/blob/YuxinDuan-README-update/SpotifyAPIGetPlaylistsResponse.json)
