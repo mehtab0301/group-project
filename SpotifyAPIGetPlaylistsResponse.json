@@ -1,0 +1,239 @@
+{
+  "href" : "https://api.spotify.com/v1/users/31sob5m46swjrjmpxoexdv6mzbwq/playlists?offset=0&limit=20",
+  "items" : [ {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2xdlrCOkz69EwM8UShrQYX"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2xdlrCOkz69EwM8UShrQYX",
+    "id" : "2xdlrCOkz69EwM8UShrQYX",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://i.scdn.co/image/ab67616d0000b273794179deeade79ef08eabd94",
+      "width" : 640
+    } ],
+    "name" : "Japanese",
+    "owner" : {
+      "display_name" : "Yuxin Duan",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/31sob5m46swjrjmpxoexdv6mzbwq"
+      },
+      "href" : "https://api.spotify.com/v1/users/31sob5m46swjrjmpxoexdv6mzbwq",
+      "id" : "31sob5m46swjrjmpxoexdv6mzbwq",
+      "type" : "user",
+      "uri" : "spotify:user:31sob5m46swjrjmpxoexdv6mzbwq"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "NSw2NzMxOThmNzkxMTQ0ODVhMTZjZDYwYWFiMDA0ZGZmYzQzNGY4ZDM3",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2xdlrCOkz69EwM8UShrQYX/tracks",
+      "total" : 3
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2xdlrCOkz69EwM8UShrQYX"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/2ZOiTJr5INRWAk0dvj2t0A"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/2ZOiTJr5INRWAk0dvj2t0A",
+    "id" : "2ZOiTJr5INRWAk0dvj2t0A",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b273414a83610a3e84f8337c9b27ab67616d0000b273518b3f02bc1e0c86b4b5fecdab67616d0000b27358560e98b2bfde5d35a73efbab67616d0000b273d63a030f28f56c03dd1e2884",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b273414a83610a3e84f8337c9b27ab67616d0000b273518b3f02bc1e0c86b4b5fecdab67616d0000b27358560e98b2bfde5d35a73efbab67616d0000b273d63a030f28f56c03dd1e2884",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b273414a83610a3e84f8337c9b27ab67616d0000b273518b3f02bc1e0c86b4b5fecdab67616d0000b27358560e98b2bfde5d35a73efbab67616d0000b273d63a030f28f56c03dd1e2884",
+      "width" : 60
+    } ],
+    "name" : "Korean",
+    "owner" : {
+      "display_name" : "Yuxin Duan",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/31sob5m46swjrjmpxoexdv6mzbwq"
+      },
+      "href" : "https://api.spotify.com/v1/users/31sob5m46swjrjmpxoexdv6mzbwq",
+      "id" : "31sob5m46swjrjmpxoexdv6mzbwq",
+      "type" : "user",
+      "uri" : "spotify:user:31sob5m46swjrjmpxoexdv6mzbwq"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MzIsN2Y3YzRjMDM0ZDI4ODkyZjk0YTcyMzRiNjUwYzE1MjU2ODE4MDRhNw==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/2ZOiTJr5INRWAk0dvj2t0A/tracks",
+      "total" : 24
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:2ZOiTJr5INRWAk0dvj2t0A"
+  }, {
+    "collaborative" : false,
+    "description" : "songs the boyz younghoon recommended, listened to and played during vlives and pm ♡",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/33HQSFjNL25HQMMicUS9E4"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/33HQSFjNL25HQMMicUS9E4",
+    "id" : "33HQSFjNL25HQMMicUS9E4",
+    "images" : [ {
+      "height" : null,
+      "url" : "https://image-cdn-ak.spotifycdn.com/image/ab67706c0000bebbac2f18f223d87187fbe9ef2c",
+      "width" : null
+    } ],
+    "name" : "younghoon's recs 🍞",
+    "owner" : {
+      "display_name" : "Jasmine ౨ৎ",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/ofg325t2ciu1v0gcoo6m4k5th"
+      },
+      "href" : "https://api.spotify.com/v1/users/ofg325t2ciu1v0gcoo6m4k5th",
+      "id" : "ofg325t2ciu1v0gcoo6m4k5th",
+      "type" : "user",
+      "uri" : "spotify:user:ofg325t2ciu1v0gcoo6m4k5th"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "NDE5LDNlYjRjZGJiZTIyZjc3NDM1ZDA2YjQ5OGQzMTczMDFmZGRiMDNhZDk=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/33HQSFjNL25HQMMicUS9E4/tracks",
+      "total" : 683
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:33HQSFjNL25HQMMicUS9E4"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/3qwgiFNmnubCTpJU3IT1KV"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/3qwgiFNmnubCTpJU3IT1KV",
+    "id" : "3qwgiFNmnubCTpJU3IT1KV",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b2730bbc8262cb4b28de58cd8663ab67616d0000b27337cd69f07c426e040540061fab67616d0000b273d3bdacbec1e8a16cd4b3f235ab67616d0000b273d441b2e9b63f0b9f9d90be19",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b2730bbc8262cb4b28de58cd8663ab67616d0000b27337cd69f07c426e040540061fab67616d0000b273d3bdacbec1e8a16cd4b3f235ab67616d0000b273d441b2e9b63f0b9f9d90be19",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b2730bbc8262cb4b28de58cd8663ab67616d0000b27337cd69f07c426e040540061fab67616d0000b273d3bdacbec1e8a16cd4b3f235ab67616d0000b273d441b2e9b63f0b9f9d90be19",
+      "width" : 60
+    } ],
+    "name" : "Mandarin",
+    "owner" : {
+      "display_name" : "Yuxin Duan",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/31sob5m46swjrjmpxoexdv6mzbwq"
+      },
+      "href" : "https://api.spotify.com/v1/users/31sob5m46swjrjmpxoexdv6mzbwq",
+      "id" : "31sob5m46swjrjmpxoexdv6mzbwq",
+      "type" : "user",
+      "uri" : "spotify:user:31sob5m46swjrjmpxoexdv6mzbwq"
+    },
+    "primary_color" : null,
+    "public" : true,
+    "snapshot_id" : "MTgsYzAzZWIyODY5Y2ViNzU5NjI5YjYxMDg1ODM3ZDYzODJmM2Y3YTRhYQ==",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/3qwgiFNmnubCTpJU3IT1KV/tracks",
+      "total" : 15
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:3qwgiFNmnubCTpJU3IT1KV"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/7Dsg8WfM3YRyQRfGKVSuT6"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/7Dsg8WfM3YRyQRfGKVSuT6",
+    "id" : "7Dsg8WfM3YRyQRfGKVSuT6",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b27338e3707cb40c117b4f15d295ab67616d0000b27339f52888c5940b1b155bdf0eab67616d0000b2738733aeff08abb0822948bbb0ab67616d0000b273a4dd01ec42266f3c633d08b5",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b27338e3707cb40c117b4f15d295ab67616d0000b27339f52888c5940b1b155bdf0eab67616d0000b2738733aeff08abb0822948bbb0ab67616d0000b273a4dd01ec42266f3c633d08b5",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b27338e3707cb40c117b4f15d295ab67616d0000b27339f52888c5940b1b155bdf0eab67616d0000b2738733aeff08abb0822948bbb0ab67616d0000b273a4dd01ec42266f3c633d08b5",
+      "width" : 60
+    } ],
+    "name" : "English",
+    "owner" : {
+      "display_name" : "Yuxin Duan",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/31sob5m46swjrjmpxoexdv6mzbwq"
+      },
+      "href" : "https://api.spotify.com/v1/users/31sob5m46swjrjmpxoexdv6mzbwq",
+      "id" : "31sob5m46swjrjmpxoexdv6mzbwq",
+      "type" : "user",
+      "uri" : "spotify:user:31sob5m46swjrjmpxoexdv6mzbwq"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MTQyLDBiNzg0NDUyM2E0ZTcyMTEyMmM1NWNkOTI3M2Q3MWRjYWZkNzEwZjA=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/7Dsg8WfM3YRyQRfGKVSuT6/tracks",
+      "total" : 70
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:7Dsg8WfM3YRyQRfGKVSuT6"
+  }, {
+    "collaborative" : false,
+    "description" : "",
+    "external_urls" : {
+      "spotify" : "https://open.spotify.com/playlist/4vC0Yluph3J8sZZ1JY9whL"
+    },
+    "href" : "https://api.spotify.com/v1/playlists/4vC0Yluph3J8sZZ1JY9whL",
+    "id" : "4vC0Yluph3J8sZZ1JY9whL",
+    "images" : [ {
+      "height" : 640,
+      "url" : "https://mosaic.scdn.co/640/ab67616d0000b27358a75e46b114389a2fe762f6ab67616d0000b27387f53da5fb4ab1171766b2d5ab67616d0000b2739d28fd01859073a3ae6ea209ab67616d0000b273bbcfc52e0e8f3cecfc91520f",
+      "width" : 640
+    }, {
+      "height" : 300,
+      "url" : "https://mosaic.scdn.co/300/ab67616d0000b27358a75e46b114389a2fe762f6ab67616d0000b27387f53da5fb4ab1171766b2d5ab67616d0000b2739d28fd01859073a3ae6ea209ab67616d0000b273bbcfc52e0e8f3cecfc91520f",
+      "width" : 300
+    }, {
+      "height" : 60,
+      "url" : "https://mosaic.scdn.co/60/ab67616d0000b27358a75e46b114389a2fe762f6ab67616d0000b27387f53da5fb4ab1171766b2d5ab67616d0000b2739d28fd01859073a3ae6ea209ab67616d0000b273bbcfc52e0e8f3cecfc91520f",
+      "width" : 60
+    } ],
+    "name" : "Kpop",
+    "owner" : {
+      "display_name" : "Yuxin Duan",
+      "external_urls" : {
+        "spotify" : "https://open.spotify.com/user/31sob5m46swjrjmpxoexdv6mzbwq"
+      },
+      "href" : "https://api.spotify.com/v1/users/31sob5m46swjrjmpxoexdv6mzbwq",
+      "id" : "31sob5m46swjrjmpxoexdv6mzbwq",
+      "type" : "user",
+      "uri" : "spotify:user:31sob5m46swjrjmpxoexdv6mzbwq"
+    },
+    "primary_color" : null,
+    "public" : false,
+    "snapshot_id" : "MjIzLGQ1MTdjNTRlY2I1MWEyNGYwMTJmMmJiZjg5NGQwOTAzMTVjNWUwZmI=",
+    "tracks" : {
+      "href" : "https://api.spotify.com/v1/playlists/4vC0Yluph3J8sZZ1JY9whL/tracks",
+      "total" : 142
+    },
+    "type" : "playlist",
+    "uri" : "spotify:playlist:4vC0Yluph3J8sZZ1JY9whL"
+  } ],
+  "limit" : 20,
+  "next" : null,
+  "offset" : 0,
+  "previous" : null,
+  "total" : 6
+}
