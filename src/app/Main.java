@@ -1,5 +1,7 @@
 package src.app;
 
+import src.interface_adapter.GenerateViewModel;
+import src.view.GenerateView;
 import src.view.ViewManager;
 import src.interface_adapter.ViewManagerModel;
 
@@ -8,7 +10,7 @@ import java.awt.*;
 
 public class Main {
     public static void main(String[] args) {
-        JFrame application = new JFrame("Login Example");
+        JFrame application = new JFrame("App");
         application.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         CardLayout cardLayout = new CardLayout();
@@ -20,5 +22,16 @@ public class Main {
         // This keeps track of and manages which view is currently showing.
         ViewManagerModel viewManagerModel = new ViewManagerModel();
         new ViewManager(views, cardLayout, viewManagerModel);
+
+        GenerateViewModel generateViewModel = new GenerateViewModel();
+
+        GenerateView generateView = new GenerateView(generateViewModel);
+        views.add(generateView);
+
+        viewManagerModel.setActiveView(generateView.viewName);
+        viewManagerModel.firePropertyChanged();
+
+        application.pack();
+        application.setVisible(true);
     }
 }
