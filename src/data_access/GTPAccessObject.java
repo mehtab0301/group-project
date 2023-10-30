@@ -1,1 +1,1 @@
-Access ChatGTP API here
+// Access ChatGTP API here

@@ -1,7 +1,7 @@
 package src.app;
 
-import src.interface_adapter.ViewManagerModel;
 import src.view.ViewManager;
+import src.interface_adapter.ViewManagerModel;
 
 import javax.swing.*;
 import java.awt.*;
