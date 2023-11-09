@@ -1,9 +1,9 @@
-package src.app;
+package app;
 
-import src.interface_adapter.GenerateViewModel;
-import src.view.GenerateView;
-import src.view.ViewManager;
-import src.interface_adapter.ViewManagerModel;
+import interface_adapter.GenerateViewModel;
+import view.GenerateView;
+import view.ViewManager;
+import interface_adapter.ViewManagerModel;
 
 import javax.swing.*;
 import java.awt.*;
