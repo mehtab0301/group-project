@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+actor promptInputBox as tempo
+entity      song      as entities
+boundary new_playlist as output
+boundary artist_name as prompt1
+boundary genre as prompt2
+boundary popularity as prompt3
+boundary year as prompt4
+boundary combo as prompt5
+boundary prompt_clarification as view_model
+
+
+tempo -> entities : To entity
+
+
+
+
+@enduml
