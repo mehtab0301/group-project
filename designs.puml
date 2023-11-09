@@ -1,0 +1,16 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+mainframe tempo (string) : list
+[-> "buyersBank : Bank" : getBalance(accountNumber)
+activate "buyersBank : Bank"
+"buyersBank : Bank" -> "ledger : AccountLedger" : retrieveAccount(accountNumber)
+activate "ledger : AccountLedger"
+return buyersAccount
+"buyersBank : Bank" -> "buyersAccount : CheckingAccount" : getBalance()
+activate "buyersAccount : CheckingAccount"
+return balance
+
+@enduml
