@@ -9,7 +9,7 @@ import java.util.Objects;
 
 public class SpotifyApiDataAccessObject
 {
-    private static final String token = "BQCRWJaZ1qfFvfAaayzE_8Utg9L7OtiQIOR6g6Tz_PmX9RhFr7Xzj8_mwtMxqJvFynYSAOUX9AclqsO2aZAuJSr5BaPlLk16KJBduPXi1gLkntcwr2pPcnP7AmjOQVVp_3oomGw18FDihHtd5u-ZdZbmQ8nm6t55gIjVJgC7GGugqNlSsHhp2EBWSfVd1oM77E-bM0S2KO9V_dpLhJymaPrwGe68pUFUcjX8kWLvdW-3DpyPSPvG6ANFw6LgfP6e8wjzDKY04g";
+    private static final String token = "BQD6hRDs_15b4iXkZuoi68msHKXeB_ygfROKmO23XNQsSWIB5Ch6wuXOPKer3Z0T-B8GtdqoIjIwul8MRCdeiSlfyk83LUUOK66V2O9VTb8b0Gs9IqFfzCNmQXRdVVydM4JqTcaAj5oSBi66x9X713BoEunNURxDkJE3vbbWu6QsYaTr_-bQf15xMIPIQH1X6tVdFaRO91tZJtgbdY2u0mJ0B4gZIBtPyCLXZL8fAWNljWAVU9_Tz-He5xORDDtbNRvNTZiDBA";
     static Integer popularity = 5;
     static Float energy = 0.5F;
     static Float speechiness = 0.5F;
@@ -27,7 +27,7 @@ public class SpotifyApiDataAccessObject
         //System.out.println(request); (sends a GET request to get a JSON collection of tracks)
         Response tracks = client.newCall(request).execute(); // stores the tracks in a Response Object (standard practice, not exactly sure)
         //System.out.println(tracks.body().string()); //note, whenever the .string() thing is run, it closes tracks, and it becomes unreadable from then on
-        List<String> listTracks = getTracks(tracks);
+        List<String> listTracks = getTrackLinks(tracks);
         System.out.println(listTracks);
 
         try {
@@ -84,6 +84,19 @@ public class SpotifyApiDataAccessObject
         }
 
         return trackIds;
+    }
+
+    public static List<String> getTrackLinks(Response response){
+        List<String> trackLinks = new ArrayList<>();
+        List<String> local_tracks = getTracks(response);
+
+        for (String trackId : local_tracks) {
+            String trackLink = "https://open.spotify.com/track/" + trackId;
+            trackLinks.add(trackLink);
+            System.out.println("Link: " + trackLink); //prints Track ID (with these settings should be Kashmir and Steady as She Goes)
+        }
+
+        return trackLinks;
     }
 
 }
