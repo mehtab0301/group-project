@@ -6,6 +6,7 @@ import java.beans.PropertyChangeSupport;
 public class GenerateViewModel extends ViewModel {
 
     public static final String TITLE_LABEL = "Generate View";
+    public static final String GENRE_LABEL = "Select a Genre for your playlist: ";
     public static final String NUM_TACKS_LABEL = "Enter how many tracks you want: ";
 
     public static final String GENERATE_BUTTON_LABEL = "Generate";

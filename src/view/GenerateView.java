@@ -17,6 +17,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
 
     private final GenerateViewModel generateViewModel;
 
+    private final JComboBox genre;
     private final JSlider popularity = new JSlider(0, 0, 100, 0);
     private final JLabel popularity_index = new JLabel();
     private final JSlider loudness = new JSlider(0 ,-60, 0, -60);
@@ -27,6 +28,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
     private final JLabel speechiness_index = new JLabel();
     private final JSlider energy = new JSlider(0, 0, 100, 0);
     private final JLabel energy_index = new JLabel();
+
     private final JTextField numTracksField = new JTextField(15);
 
     private final JButton generate;
@@ -35,11 +37,31 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         this.generateViewModel = generateViewModel;
         generateViewModel.addPropertyChangeListener(this);
 
+        // Title for the pop-up
         JLabel title = new JLabel(GenerateViewModel.TITLE_LABEL);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
-        numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
+        String genreList[] = {"acoustic", "afrobeat", "alt-rock", "alternative", "ambient", "anime", "black-metal",
+                "bluegrass", "blues", "bossanova", "brazil", "breakbeat", "british", "cantopop", "chicago-house",
+                "children", "chill", "classical", "club", "comedy", "country", "dance", "dancehall", "death-metal",
+                "deep-house", "detroit-techno", "disco", "disney", "drum-and-bass", "dub", "dubstep", "edm", "electro",
+                "electronic", "emo", "folk", "forro", "french", "funk", "garage", "german", "gospel", "goth",
+                "grindcore", "groove", "grunge", "guitar", "happy", "hard-rock", "hardcore", "hardstyle", "heavy-metal",
+                "hip-hop", "holidays", "honky-tonk", "house", "idm", "indian", "indie", "indie-pop", "industrial",
+                "iranian", "j-dance", "j-idol", "j-pop", "j-rock", "jazz", "k-pop", "kids", "latin", "latino", "malay",
+                "mandopop", "metal", "metal-misc", "metalcore", "minimal-techno", "movies", "mpb", "new-age",
+                "new-release", "opera", "pagode", "party", "philippines-opm", "piano", "pop", "pop-film",
+                "post-dubstep", "power-pop", "progressive-house", "psych-rock", "punk", "punk-rock", "r-n-b",
+                "rainy-day", "reggae", "reggaeton", "road-trip", "rock", "rock-n-roll", "rockabilly", "romance",
+                "sad", "salsa", "samba", "sertanejo", "show-tunes", "singer-songwriter", "ska", "sleep", "songwriter",
+                "soul", "soundtracks", "spanish", "study", "summer", "swedish", "synth-pop", "tango", "techno"};
+
+        genre = new JComboBox(genreList);
+
+        JPanel genreBox = new JPanel();
+        genreBox.add(new JLabel(GenerateViewModel.GENRE_LABEL));
+        genreBox.add(genre);
+        genreBox.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Popularity Index Slider
         popularity.setBorder(BorderFactory.createTitledBorder("Choose desired Popularity index:"));
@@ -110,7 +132,11 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         energy_index.setText("value of Energy chosen is = " + (double) energy.getValue() / 100);
         energy_index.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        // Input field for user to enter number of tracks they want in the playlist
+        LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
+        numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        // Button for generating the playlist
         JPanel buttons = new JPanel();
         generate = new JButton(GenerateViewModel.GENERATE_BUTTON_LABEL);
         buttons.add(generate);
@@ -120,6 +146,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         this.add(title);
+        this.add(genreBox);
         this.add(popularity, BorderLayout.SOUTH);
         this.add(popularity_index);
         this.add(loudness, BorderLayout.SOUTH);
