@@ -31,3 +31,4 @@ public class GenerateViewModel extends ViewModel {
         return state;
     }
 }
+
