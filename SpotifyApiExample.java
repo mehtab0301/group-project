@@ -8,7 +8,7 @@ import java.io.IOException;
 
 public class SpotifyApiExample {
     // Note that our token expires every hour, so it must be updated constantly for it to work. We use PostMan to get it done. 
-    private static final String token = "BQCpE_Upju9D8m-EKULQ2OqCBWOgB1Vx47F3YmO6zvuzcWIauWroppykYnfFrMcVuQtMsJch831vCVrsEssVtxkezZ314G_aIE7JFJZhSVAAy1uhsgGEnJCa0c2_Q2ZbBoITzTnuYG4rW8lKTlLnl7MgsD1d1L3QfrWBlvCszqaiCF7UalQQT1pv1GpOVljGH8pLUs6IjgEWuwHTYnUjkhm8iiQaon4jANZqjg";
+    private static final String token = "BQBGiAGSWiQ6CFmyGLR9A-9sjh4dhgN-U4czUUGXUhqV_42c0ns3K0C3PXPEg4i9qOkUFI9nNweRy25y4hIlIfigHdKaQLM83BHPQnokiQQ4Yat8HJyuuB76_37UWsj2GQGgtK6V8JhfmArO-RkBlqApXra1UBIqo_ZbM2Sb7Aix9iVuNuqFelJXRjCLxnJLZIGdRNvGg5yU7euHVYq-vrsQoCUYyNyceYwiXw";
     private static final String url = "https://api.spotify.com/v1/browse/new-releases";
 
     public static void main(String[] args) {
