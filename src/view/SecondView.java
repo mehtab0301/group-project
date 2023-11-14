@@ -1,7 +1,6 @@
 package view;
 
 import interface_adapter.GenerateViewModel;
-import view.LabelTextPanel;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -12,8 +11,8 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class GenerateView extends JPanel implements ActionListener, PropertyChangeListener, ChangeListener {
-    public final String viewName = "generate";
+public class SecondView extends JPanel implements ActionListener, PropertyChangeListener, ChangeListener {
+    public static final String viewName = "generate";
 
     private final GenerateViewModel generateViewModel;
 
@@ -44,8 +43,8 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
     public double selectedEnergy;
 
 
-    public GenerateView(GenerateViewModel generateViewModel) {
-        this.generateViewModel = generateViewModel;
+    public SecondView(GenerateViewModel generateViewModel) {
+        this.generateViewModel = generateViewModel;  // Fix this line
         generateViewModel.addPropertyChangeListener(this);
 
         // Creating variables to store the selected information about the user

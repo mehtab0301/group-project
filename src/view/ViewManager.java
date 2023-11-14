@@ -10,6 +10,7 @@ public class ViewManager implements PropertyChangeListener {
     private final CardLayout cardLayout;
     private final JPanel views;
     private ViewManagerModel viewManagerModel;
+    private Container cardPanel;
 
     public ViewManager(JPanel views, CardLayout cardLayout, ViewManagerModel viewManagerModel) {
         this.views = views;
@@ -24,5 +25,9 @@ public class ViewManager implements PropertyChangeListener {
             String viewModelName = (String) evt.getNewValue();
             cardLayout.show(views, viewModelName);
         }
+    }
+    public static void switchToActiveView() {
+        String activeView = viewManagerModel.getActiveView();
+        cardLayout.show(cardPanel, activeView);
     }
 }
