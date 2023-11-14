@@ -27,7 +27,6 @@ public class ViewManager implements PropertyChangeListener {
         }
     }
     public static void switchToActiveView() {
-        String activeView = viewManagerModel.getActiveView();
-        cardLayout.show(cardPanel, activeView);
+        //TODO: implement this for switch view to work
     }
 }
