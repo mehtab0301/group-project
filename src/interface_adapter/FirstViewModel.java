@@ -9,6 +9,10 @@ public class FirstViewModel extends ViewModel{
 
     public static final String CREATE_BUTTON_LABEL = "Create playlist";
 
+    public static final String MERGE_BUTTON_LABEL = "Merge Playlist";
+
+    public static final String Info_BUTTON_LABEL = "Information about playlist";
+
 
     private GenerateState state = new GenerateState();
 
