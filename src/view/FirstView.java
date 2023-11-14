@@ -47,12 +47,19 @@ public class FirstView extends JPanel implements PropertyChangeListener, ActionL
 
         create.addActionListener(this);
 
+        // Adding the button to the view
+        JButton merge = new JButton(FirstViewModel.MERGE_BUTTON_LABEL);
+        buttons.add(merge);
+
+        merge.addActionListener(this);
+
         // Choosing the layout
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
 
         this.add(title);
         this.add(create);
+        this.add(merge);
     }
 
 
