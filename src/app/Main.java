@@ -1,7 +1,9 @@
 package app;
 
-import interface_adapter.GenerateViewModel;
+import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.login.LoginViewModel;
 import view.GenerateView;
+import view.LoginView;
 import view.ViewManager;
 import interface_adapter.ViewManagerModel;
 
@@ -24,11 +26,15 @@ public class Main {
         new ViewManager(views, cardLayout, viewManagerModel);
 
         GenerateViewModel generateViewModel = new GenerateViewModel();
-
         GenerateView generateView = new GenerateView(generateViewModel);
-        views.add(generateView);
+        views.add(generateView, generateView.viewName);
 
-        viewManagerModel.setActiveView(generateView.viewName);
+        // Temporary input formats use for changing views
+        LoginViewModel loginViewModel = new LoginViewModel();
+        LoginView loginView = new LoginView(loginViewModel, generateViewModel, viewManagerModel);
+        views.add(loginView, loginView.viewName);
+
+        viewManagerModel.setActiveView(loginView.viewName);
         viewManagerModel.firePropertyChanged();
 
         application.pack();
