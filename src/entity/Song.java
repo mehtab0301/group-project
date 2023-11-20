@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.List;
+
 public class Song {
 
     private final String name;
@@ -23,4 +25,6 @@ public class Song {
     public int getPopularity() {
         return popularity;
     }
+
+    // {object1: [name(string), artists(list of strings), songLink(string)], object2, object3, ...}
 }

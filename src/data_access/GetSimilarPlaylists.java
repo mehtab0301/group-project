@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class GetSimilarPlaylists {
-    private static final String token = "BQBnC3WCjhc_aIExncQ5CZLqzhr-mDCg2N4puIyYR8OQ9JMb3f8N2ovLDjh5PloxaHg9Ipqi083acQ1ocqIYYyIokHJZXf8QpwX3r9T7rJ4IUoNed8eA76iySIdHCPAKF0wF_yNkJQ_49_Q5TKew49ul2jaGgz5D8USZ5Q5OP3reRZLohXhLlSEnEcGY4OZq_Ikap6g8v54dkY6MjDZYOzKgF6LB-CzA4_yBldNcuFnR4ImtoScFSqMl4KOsgKUhg8Xi1ub3PA";
+    private static final String token = "BQBe14ZC5JRY9sIkWW6_g2cXMvR5MDq9AsA4X3BVX_0fG9bCwkhB_QVYOgWGvQnufjNTvHsPrRU1StyU7Vsf6XQBZH9WylsS40NGpnPytBFerQiTuBdIlD-3-MU5WzNViJ-ZQgZasUF6ZgyWMR5CF7ehrcNjZ8qTJMdtAjHF_xCSBPWuPtFR5xb-qYvx1AhILssAiex5-bhwRNGb5F32SKHd8QuVDHmAdRV-U4PWIlViC6YtpxI08FUk5bxEjCwdwNAG2uHKt0XHZJzj-oc_ebogPwM";
 
     // implement getSongName method, which will return a song name from the SpotifyAPIDataObject list
     static String songName = "Another Brick in the Wall";
@@ -45,6 +45,6 @@ public class GetSimilarPlaylists {
             String link = item.getJSONObject("external_urls").getString("spotify");
             playlistLinks.add(link);
         }
-        // System.out.println(playlistLinks);
+        System.out.println(playlistLinks);
     }
 }

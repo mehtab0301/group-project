@@ -1,32 +1,22 @@
 package interface_adapter.generate;
 
 public class GenerateState {
-    private String prompt = "";
-    private String promptError = null;
+    private String genre = "";
+    private int numberOfTracks = 0;
 
     public GenerateState(GenerateState copy) {
-        prompt = copy.prompt;
-        promptError = copy.promptError;;
+        genre = copy.genre;
+        numberOfTracks = copy.numberOfTracks;;
     }
 
     public GenerateState() {
     }
 
-    public String getPrompt() {
-        return prompt;
-    }
+    public String getGenre() { return genre; }
 
-    public String getPromptError() {
-        return promptError;
-    }
+    public int getNumberOfTracks() { return numberOfTracks; }
 
-    public void setPrompt(String prompt) { this.prompt = prompt; }
+    public void setGenre(String genre) { this.genre = genre; }
 
-    public void setPromptError(String promptError) { this.promptError = promptError; }
-
-    @Override
-    public String toString() {
-        return "GenerateState{" +
-                "prompt='" + prompt + '}';
-    }
+    public void setNumberOfTracks(int numberOfTracks) { this.numberOfTracks = numberOfTracks; }
 }
