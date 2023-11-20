@@ -84,7 +84,17 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         popularity.setPaintTicks(true);
         popularity.setPaintLabels(true);
 
-        popularity.addChangeListener(this);
+        popularity.addChangeListener(
+                new ChangeListener() {
+                    @Override
+                    public void stateChanged(ChangeEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        int popularitySelected = popularity.getValue();
+                        currentState.setPopularity(popularitySelected);
+                        generateViewModel.setState(currentState);
+                    }
+                }
+        );
 
         popularity_index.setText("value of Popularity chosen is = " + popularity.getValue());
         popularity_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -96,7 +106,17 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         loudness.setPaintTicks(true);
         loudness.setPaintLabels(true);
 
-        loudness.addChangeListener(this);
+        loudness.addChangeListener(
+                new ChangeListener() {
+                    @Override
+                    public void stateChanged(ChangeEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        int loudnessSelected = loudness.getValue();
+                        currentState.setLoudness(loudnessSelected);
+                        generateViewModel.setState(currentState);
+                    }
+                }
+        );
 
         loudness_index.setText("value of Loudness chosen is = " + loudness.getValue());
         loudness_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -115,7 +135,17 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         valence.setPaintTicks(true);
         valence.setPaintLabels(true);
 
-        valence.addChangeListener(this);
+        valence.addChangeListener(
+                new ChangeListener() {
+                    @Override
+                    public void stateChanged(ChangeEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        double valenceSelected = valence.getValue() * 0.01;
+                        currentState.setValence(valenceSelected);
+                        generateViewModel.setState(currentState);
+                    }
+                }
+        );
 
         valence_index.setText("value of Valence chosen is = " + (double) valence.getValue() / 100);
         valence_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -128,7 +158,17 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         speechiness.setPaintTicks(true);
         speechiness.setPaintLabels(true);
 
-        speechiness.addChangeListener(this);
+        speechiness.addChangeListener(
+                new ChangeListener() {
+                    @Override
+                    public void stateChanged(ChangeEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        double speechinessSelected = speechiness.getValue() * 0.01;
+                        currentState.setSpeechiness(speechinessSelected);
+                        generateViewModel.setState(currentState);
+                    }
+                }
+        );
 
         speechiness_index.setText("value of Speechiness chosen is = " + (double) speechiness.getValue() / 100);
         speechiness_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -141,7 +181,17 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         energy.setPaintTicks(true);
         energy.setPaintLabels(true);
 
-        energy.addChangeListener(this);
+        energy.addChangeListener(
+                new ChangeListener() {
+                    @Override
+                    public void stateChanged(ChangeEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        double energySelected = energy.getValue() * 0.01;
+                        currentState.setEnergy(energySelected);
+                        generateViewModel.setState(currentState);
+                    }
+                }
+        );
 
         energy_index.setText("value of Energy chosen is = " + (double) energy.getValue() / 100);
         energy_index.setAlignmentX(Component.CENTER_ALIGNMENT);
