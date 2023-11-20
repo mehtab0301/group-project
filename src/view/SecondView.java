@@ -1,6 +1,6 @@
 package view;
 
-import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.GenerateViewModel;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
