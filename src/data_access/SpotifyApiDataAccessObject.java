@@ -53,7 +53,8 @@ public class SpotifyApiDataAccessObject
     public static HttpUrl.Builder createURL (){ //not super elegant but gets the job done
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://api.spotify.com/v1/recommendations").newBuilder();
         urlBuilder.addQueryParameter("limit", String.valueOf(num_of_tracks));
-        urlBuilder.addQueryParameter("target_popularity", String.valueOf(popularity));
+        urlBuilder.addQueryParameter("max_popularity", String.valueOf(popularity));
+        urlBuilder.addQueryParameter("min_popularity", String.valueOf(Math.max(popularity-10, 0)));
         urlBuilder.addQueryParameter("seed_genres", String.valueOf(genre));
         urlBuilder.addQueryParameter("target_speechiness", String.valueOf(speechiness));
         urlBuilder.addQueryParameter("target_energy", String.valueOf(energy));
