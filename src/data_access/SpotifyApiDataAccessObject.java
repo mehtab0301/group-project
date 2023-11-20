@@ -12,7 +12,7 @@ import java.util.Objects;
 public class SpotifyApiDataAccessObject
 {
     // Use your own token below, remember to refresh every hour
-    private static final String token = " ";
+    private static final String token = "BQDsrsSujpz3e-5Uh1B90Hg1r6srPakbiJhAzSwNxqJhfW46peeXHxU-GlO_3eZY7pHeFhJMgC6St3KN5CziFArWf8Eqla98TzyOCSfcx_4fKVzNJFukj_E8zue9DhZU1C-f8MAzAC8M2hscpb-grC-Xrg9sMTzZHy0JKFo_3hKQ6ygzZ1BM1ebPd-d6-mH5hO4K2M15KxcWrBHgYceLAborIjx2cEdNmynXhg";
     static Integer popularity = 5;
     static Float energy = 0.5F;
     static Float speechiness = 0.5F;

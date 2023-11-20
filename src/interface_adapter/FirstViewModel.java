@@ -1,8 +1,10 @@
 package interface_adapter;
+import interface_adapter.generate.GenerateState;
+
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 
-public class FirstViewModel extends ViewModel{
+public class FirstViewModel extends ViewModel {
 
 
     public static final String TITLE_LABEL = "Main Menu";

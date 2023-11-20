@@ -1,6 +1,7 @@
 package view;
 
 import interface_adapter.generate.GenerateViewModel;
+import view.LabelTextPanel;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
@@ -42,13 +43,15 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
 
     public double selectedEnergy;
 
+    public int numb_tracks;
+
+    //public string genre;
+
+
 
     public GenerateView(GenerateViewModel generateViewModel) {
         this.generateViewModel = generateViewModel;
         generateViewModel.addPropertyChangeListener(this);
-
-        // Creating variables to store the selected information about the user
-
 
         // Title for the pop-up
         JLabel title = new JLabel(GenerateViewModel.TITLE_LABEL);
@@ -197,5 +200,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         selectedValence = valence.getValue();
         selectedSpeechiness = speechiness.getValue();
         selectedEnergy = energy.getValue();
+
     }
 }
