@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 public class GetTrackDetails {
-    private static final String token = "BQDKXXZFV03ImAAsgdOvyvmeY0NZIhDoudxOZaMulfPRMAVCc5kXPBtjdfllEkE_6pzcFiFKglrl0cqjk7-K3ogMjVgJpe9vHuJQYf9e9GCGhx5r81WQUWSkLQOWB--WXBKg_om9E2HyB5svj9q6jkXsCJMSHMtEq-QMYsUPnuumu2mO2rHcEGTkNhTfWfSM9H3jYSDi4GnHCGpE3uSfj2bxpt3pqCYBdUXIL4llPWGeCp-ZhMg_b7PDBOG_fsoO9s9M1irrxA";
+    private static final String token = "BQBe14ZC5JRY9sIkWW6_g2cXMvR5MDq9AsA4X3BVX_0fG9bCwkhB_QVYOgWGvQnufjNTvHsPrRU1StyU7Vsf6XQBZH9WylsS40NGpnPytBFerQiTuBdIlD-3-MU5WzNViJ-ZQgZasUF6ZgyWMR5CF7ehrcNjZ8qTJMdtAjHF_xCSBPWuPtFR5xb-qYvx1AhILssAiex5-bhwRNGb5F32SKHd8QuVDHmAdRV-U4PWIlViC6YtpxI08FUk5bxEjCwdwNAG2uHKt0XHZJzj-oc_ebogPwM";
     static String songLink = "https://open.spotify.com/track/0QVO36SaIlLGXiGZoMG6sO";
     // we'll just ask the user to input the link to the song
     public static void main(String[] args) throws IOException {

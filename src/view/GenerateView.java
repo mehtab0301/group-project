@@ -1,5 +1,6 @@
 package view;
 
+import interface_adapter.generate.GenerateState;
 import interface_adapter.generate.GenerateViewModel;
 
 import javax.swing.*;
@@ -8,6 +9,8 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
@@ -75,6 +78,18 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         genreBox.add(new JLabel(GenerateViewModel.GENRE_LABEL));
         genreBox.add(genre);
         genreBox.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        genre.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        String genreSelected = (String) genre.getSelectedItem();
+                        currentState.setGenre(genreSelected);
+                        generateViewModel.setState(currentState);
+                    }
+                }
+        );
 
         // Popularity Index Slider
         popularity.setBorder(BorderFactory.createTitledBorder("Choose desired Popularity index:"));
@@ -148,6 +163,26 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         // Input field for user to enter number of tracks they want in the playlist
         LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
         numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        numTracksField.addKeyListener(
+                new KeyListener() {
+                    @Override
+                    public void keyTyped(KeyEvent e) {
+                        GenerateState currentState = generateViewModel.getState();
+                        int numberOfTracks = Integer.valueOf(numTracksField.getText() + e.getKeyChar());
+                        currentState.setNumberOfTracks(numberOfTracks);
+                        generateViewModel.setState(currentState);
+                    }
+
+                    @Override
+                    public void keyPressed(KeyEvent e) {
+                    }
+
+                    @Override
+                    public void keyReleased(KeyEvent e) {
+                    }
+                }
+        );
 
         // Button for generating the playlist
         JPanel buttons = new JPanel();
