@@ -1,7 +1,6 @@
 package view;
 
-import interface_adapter.GenerateViewModel;
-import view.LabelTextPanel;
+import interface_adapter.generate.GenerateViewModel;
 
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;

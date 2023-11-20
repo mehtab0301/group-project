@@ -1,4 +1,4 @@
-package interface_adapter;
+package interface_adapter.generate;
 
 public class GenerateState {
     private String prompt = "";
