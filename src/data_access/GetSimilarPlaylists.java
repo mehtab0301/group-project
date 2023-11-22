@@ -13,8 +13,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 
 public class GetSimilarPlaylists {
-    private static final String token = "BQBnC3WCjhc_aIExncQ5CZLqzhr-mDCg2N4puIyYR8OQ9JMb3f8N2ovLDjh5PloxaHg9Ipqi083acQ1ocqIYYyIokHJZXf8QpwX3r9T7rJ4IUoNed8eA76iySIdHCPAKF0wF_yNkJQ_49_Q5TKew49ul2jaGgz5D8USZ5Q5OP3reRZLohXhLlSEnEcGY4OZq_Ikap6g8v54dkY6MjDZYOzKgF6LB-CzA4_yBldNcuFnR4ImtoScFSqMl4KOsgKUhg8Xi1ub3PA";
-
+    private static final String token = GetToken.getToken();
     // implement getSongName method, which will return a song name from the SpotifyAPIDataObject list
     static String songName = "Another Brick in the Wall";
     static Integer numOfPlaylists = 3;
@@ -45,6 +44,6 @@ public class GetSimilarPlaylists {
             String link = item.getJSONObject("external_urls").getString("spotify");
             playlistLinks.add(link);
         }
-        // System.out.println(playlistLinks);
+        System.out.println(playlistLinks);
     }
 }

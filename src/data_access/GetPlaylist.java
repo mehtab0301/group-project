@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class SpotifyApiDataAccessObject
+public class GetPlaylist
 {
-    private static final String token = "BQD6hRDs_15b4iXkZuoi68msHKXeB_ygfROKmO23XNQsSWIB5Ch6wuXOPKer3Z0T-B8GtdqoIjIwul8MRCdeiSlfyk83LUUOK66V2O9VTb8b0Gs9IqFfzCNmQXRdVVydM4JqTcaAj5oSBi66x9X713BoEunNURxDkJE3vbbWu6QsYaTr_-bQf15xMIPIQH1X6tVdFaRO91tZJtgbdY2u0mJ0B4gZIBtPyCLXZL8fAWNljWAVU9_Tz-He5xORDDtbNRvNTZiDBA";
+    private static final String token = GetToken.getToken();
     static Integer popularity = 5;
     static Float energy = 0.5F;
     static Float speechiness = 0.5F;
