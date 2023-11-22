@@ -19,4 +19,7 @@ public class PlaylistHistoryAccess {
     public static ArrayList<Playlist> getPlaylists(){
         return generatedPlaylists;
     }
+    public static Boolean isMergeable(){
+        return generatedPlaylists.size() > 1;
+    }
 }
