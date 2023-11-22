@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the entities, created the data storage objects and did the mergePlaylists interactor." />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the entities, created the data storage objects and did the mergePlaylists interactor.">
+      <change afterPath="$PROJECT_DIR$/src/use_case/CreatePlaylist/CreatePlaylistInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyApiPractice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetPlaylist.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +60,7 @@
       <recent name="data_access" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GetSimilarPlaylists">
     <configuration name="GetSimilarPlaylists" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -113,7 +119,8 @@
       <workItem from="1700275646806" duration="59000" />
       <workItem from="1700423917735" duration="956000" />
       <workItem from="1700534363423" duration="592000" />
-      <workItem from="1700610717712" duration="12956000" />
+      <workItem from="1700610717712" duration="13270000" />
+      <workItem from="1700666467432" duration="1895000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -147,7 +154,31 @@
       <option name="project" value="LOCAL" />
       <updated>1700625376680</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Updated the entities, created the data storage objects and did the mergePlaylists interactor.">
+      <option name="closed" value="true" />
+      <created>1700625507165</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700625507165</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated the entities, created the data storage objects and did the mergePlaylists interactor.">
+      <option name="closed" value="true" />
+      <created>1700625587666</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700625587666</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Updated the entities, created the data storage objects and did the mergePlaylists interactor.">
+      <option name="closed" value="true" />
+      <created>1700625680664</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1700625680664</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,7 +189,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
