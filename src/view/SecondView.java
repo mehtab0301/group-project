@@ -1,6 +1,5 @@
 package view;
 
-import interface_adapter.generate.GenerateState;
 import interface_adapter.generate.GenerateViewModel;
 
 import javax.swing.*;
@@ -9,13 +8,11 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class GenerateView extends JPanel implements ActionListener, PropertyChangeListener, ChangeListener {
-    public final String viewName = "generate";
+public class SecondView extends JPanel implements ActionListener, PropertyChangeListener, ChangeListener {
+    public static final String viewName = "generate";
 
     private final GenerateViewModel generateViewModel;
 
@@ -46,8 +43,8 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
     public double selectedEnergy;
 
 
-    public GenerateView(GenerateViewModel generateViewModel) {
-        this.generateViewModel = generateViewModel;
+    public SecondView(GenerateViewModel generateViewModel) {
+        this.generateViewModel = generateViewModel;  // Fix this line
         generateViewModel.addPropertyChangeListener(this);
 
         // Creating variables to store the selected information about the user
@@ -79,18 +76,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         genreBox.add(genre);
         genreBox.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        genre.addActionListener(
-                new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        String genreSelected = (String) genre.getSelectedItem();
-                        currentState.setGenre(genreSelected);
-                        generateViewModel.setState(currentState);
-                    }
-                }
-        );
-
         // Popularity Index Slider
         popularity.setBorder(BorderFactory.createTitledBorder("Choose desired Popularity index:"));
         popularity.setMinorTickSpacing(1);
@@ -98,17 +83,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         popularity.setPaintTicks(true);
         popularity.setPaintLabels(true);
 
-        popularity.addChangeListener(
-                new ChangeListener() {
-                    @Override
-                    public void stateChanged(ChangeEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        int popularitySelected = popularity.getValue();
-                        currentState.setPopularity(popularitySelected);
-                        generateViewModel.setState(currentState);
-                    }
-                }
-        );
+        popularity.addChangeListener(this);
 
         popularity_index.setText("value of Popularity chosen is = " + popularity.getValue());
         popularity_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -120,17 +95,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         loudness.setPaintTicks(true);
         loudness.setPaintLabels(true);
 
-        loudness.addChangeListener(
-                new ChangeListener() {
-                    @Override
-                    public void stateChanged(ChangeEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        int loudnessSelected = loudness.getValue();
-                        currentState.setLoudness(loudnessSelected);
-                        generateViewModel.setState(currentState);
-                    }
-                }
-        );
+        loudness.addChangeListener(this);
 
         loudness_index.setText("value of Loudness chosen is = " + loudness.getValue());
         loudness_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -149,17 +114,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         valence.setPaintTicks(true);
         valence.setPaintLabels(true);
 
-        valence.addChangeListener(
-                new ChangeListener() {
-                    @Override
-                    public void stateChanged(ChangeEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        double valenceSelected = valence.getValue() * 0.01;
-                        currentState.setValence(valenceSelected);
-                        generateViewModel.setState(currentState);
-                    }
-                }
-        );
+        valence.addChangeListener(this);
 
         valence_index.setText("value of Valence chosen is = " + (double) valence.getValue() / 100);
         valence_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -172,17 +127,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         speechiness.setPaintTicks(true);
         speechiness.setPaintLabels(true);
 
-        speechiness.addChangeListener(
-                new ChangeListener() {
-                    @Override
-                    public void stateChanged(ChangeEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        double speechinessSelected = speechiness.getValue() * 0.01;
-                        currentState.setSpeechiness(speechinessSelected);
-                        generateViewModel.setState(currentState);
-                    }
-                }
-        );
+        speechiness.addChangeListener(this);
 
         speechiness_index.setText("value of Speechiness chosen is = " + (double) speechiness.getValue() / 100);
         speechiness_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -195,17 +140,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         energy.setPaintTicks(true);
         energy.setPaintLabels(true);
 
-        energy.addChangeListener(
-                new ChangeListener() {
-                    @Override
-                    public void stateChanged(ChangeEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        double energySelected = energy.getValue() * 0.01;
-                        currentState.setEnergy(energySelected);
-                        generateViewModel.setState(currentState);
-                    }
-                }
-        );
+        energy.addChangeListener(this);
 
         energy_index.setText("value of Energy chosen is = " + (double) energy.getValue() / 100);
         energy_index.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -213,26 +148,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         // Input field for user to enter number of tracks they want in the playlist
         LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
         numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
-
-        numTracksField.addKeyListener(
-                new KeyListener() {
-                    @Override
-                    public void keyTyped(KeyEvent e) {
-                        GenerateState currentState = generateViewModel.getState();
-                        int numberOfTracks = Integer.valueOf(numTracksField.getText() + e.getKeyChar());
-                        currentState.setNumberOfTracks(numberOfTracks);
-                        generateViewModel.setState(currentState);
-                    }
-
-                    @Override
-                    public void keyPressed(KeyEvent e) {
-                    }
-
-                    @Override
-                    public void keyReleased(KeyEvent e) {
-                    }
-                }
-        );
 
         // Button for generating the playlist
         JPanel buttons = new JPanel();

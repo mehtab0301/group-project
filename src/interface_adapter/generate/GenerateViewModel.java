@@ -1,4 +1,6 @@
-package interface_adapter;
+package interface_adapter.generate;
+
+import interface_adapter.ViewModel;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
@@ -31,3 +33,4 @@ public class GenerateViewModel extends ViewModel {
         return state;
     }
 }
+
