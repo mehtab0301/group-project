@@ -1,5 +1,6 @@
-package data_access;
+package API_calls;
 
+import API_calls.GetToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.*;
@@ -9,10 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class SpotifyApiDataAccessObject
+public class GetPlaylist
 {
-    // Use your own token below, remember to refresh every hour
-    private static final String token = "BQBe14ZC5JRY9sIkWW6_g2cXMvR5MDq9AsA4X3BVX_0fG9bCwkhB_QVYOgWGvQnufjNTvHsPrRU1StyU7Vsf6XQBZH9WylsS40NGpnPytBFerQiTuBdIlD-3-MU5WzNViJ-ZQgZasUF6ZgyWMR5CF7ehrcNjZ8qTJMdtAjHF_xCSBPWuPtFR5xb-qYvx1AhILssAiex5-bhwRNGb5F32SKHd8QuVDHmAdRV-U4PWIlViC6YtpxI08FUk5bxEjCwdwNAG2uHKt0XHZJzj-oc_ebogPwM";
+    private static final String token = GetToken.getToken();
     static Integer popularity = 5;
     static Float energy = 0.5F;
     static Float speechiness = 0.5F;
@@ -29,7 +29,7 @@ public class SpotifyApiDataAccessObject
         Request request = (new Request.Builder()).url(urlBuilder.build()).get().addHeader("Authorization", "Bearer " + token ).build();
         //System.out.println(request); (sends a GET request to get a JSON collection of tracks)
         Response tracks = client.newCall(request).execute(); // stores the tracks in a Response Object (standard practice, not exactly sure)
-        System.out.println(tracks.body().string()); //note, whenever the .string() thing is run, it closes tracks, and it becomes unreadable from then on
+        //System.out.println(tracks.body().string()); //note, whenever the .string() thing is run, it closes tracks, and it becomes unreadable from then on
         List<String> listTracks = getTrackLinks(tracks);
         System.out.println(listTracks);
 
@@ -78,10 +78,9 @@ public class SpotifyApiDataAccessObject
 
             // retrieves the id field and stores it
             for (JsonNode trackNode : tracksArray) {
-                //String trackId = trackNode.path("id").asText(); //converts JSON to String
-                String trackName = trackNode.path("name").asText(); //converts JSON to String
-                trackIds.add(trackName); // adds to trackIds array
-                System.out.println("Track Name: " + trackName); //prints Track ID (with these settings should be Kashmir and Steady as She Goes)
+                String trackId = trackNode.path("id").asText(); //converts JSON to String
+                trackIds.add(trackId); // adds to trackIds array
+                System.out.println("Track ID: " + trackId); //prints Track ID (with these settings should be Kashmir and Steady as She Goes)
             }
 
         } catch (IOException e) {
