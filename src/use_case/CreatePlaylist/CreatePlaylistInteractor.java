@@ -21,7 +21,7 @@ public class CreatePlaylistInteractor {
     static float danceability = 0.5F;
     static int num_of_tracks = 2;
     static String genre = "rock";
-    public void generatePlaylists() throws IOException {
+    public List<Object> generatePlaylists() throws IOException {
         ArrayList<Object> api_call = GetPlaylist.getPlaylistCall(popularity, energy, speechiness, valence, danceability, num_of_tracks, genre);
         OkHttpClient client = (OkHttpClient) api_call.get(0);
         Request request = (Request) api_call.get(1); //info from api_call method
@@ -29,8 +29,18 @@ public class CreatePlaylistInteractor {
         Response tracks = client.newCall(request).execute(); // stores the tracks in a Response Object (standard practice, not exactly sure)
         //System.out.println(tracks.body().string()); //note, whenever the .string() thing is run, it closes tracks, and it becomes unreadable from then on
 
-        List<String> listTracks = getTrackLinks(tracks);
-        System.out.println(listTracks);
+        List<Object> songItems = new ArrayList<>();
+        List<String> trackNames = getTrackNames(tracks);
+        songItems.add(trackNames);
+        List<List<String>> trackArtists = getTrackArtists(tracks);
+        songItems.add(trackArtists);
+        List<String> trackLinks = getTrackLinks(tracks);
+        songItems.add(trackLinks);
+        List<String> trackDates = getTrackDates(tracks);
+        songItems.add(trackDates);
+        List<Integer> trackPopularities = getTrackPopularities(tracks);
+        songItems.add(trackPopularities);
+        //System.out.println(trackNames);
 
         try {
             System.out.println("Response Code: " + tracks.code());
@@ -46,7 +56,60 @@ public class CreatePlaylistInteractor {
         } finally {
             tracks.close(); //avoids potential errors of closing prematurely (I don't remember exactly, but it could contribute to 400 code)
         } //should be done last! .close, closes tracks and becomes unreadable. Also note .string() does the same thing
+        return songItems;
+    }
+    public static List<List<String>> getTrackArtists(Response response) {
+        List<List<String>> trackArtists = new ArrayList<>();
 
+        try {
+            // Read the response body content
+            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+
+            // Parse JSON response
+            ObjectMapper objectMapper = new ObjectMapper();
+            // Access the "tracks" array
+            JsonNode tracksArray = objectMapper.readTree(responseBody).path("tracks"); //found this JSON reading method online
+            for (JsonNode trackNode : tracksArray) {
+                JsonNode jsonArtists = trackNode.path("artists");
+                ArrayList<String> artistsSong = new ArrayList<>();
+                for (JsonNode artistNode : jsonArtists) {
+                    String trackArtist = artistNode.path("name").asText();
+                    artistsSong.add(trackArtist);
+                }
+                trackArtists.add(artistsSong); // adds List of Artists of a Song
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e); // necessary for the .string() to work
+        }
+
+        return trackArtists;
+    }
+
+    public static List<String> getTrackNames(Response response) {
+        List<String> trackNames = new ArrayList<>();
+
+        try {
+            // Read the response body content
+            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+
+            // Parse JSON response
+            ObjectMapper objectMapper = new ObjectMapper();
+            // Access the "tracks" array
+            JsonNode tracksArray = objectMapper.readTree(responseBody).path("tracks"); //found this JSON reading method online
+
+            // retrieves the id field and stores it
+            for (JsonNode trackNode : tracksArray) {
+                String trackName = trackNode.path("name").asText(); //converts JSON to String
+                trackNames.add(trackName); // adds to trackIds array
+                System.out.println("Track Name: " + trackName); //prints Track ID (with these settings should be Kashmir and Steady as She Goes)
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e); // necessary for the .string() to work
+        }
+
+        return trackNames;
     }
     public static List<String> getTracks(Response response) {
         List<String> trackIds = new ArrayList<>();
@@ -73,6 +136,57 @@ public class CreatePlaylistInteractor {
 
         return trackIds;
     }
+    public static List<Integer> getTrackPopularities(Response response) {
+        List<Integer> trackPops = new ArrayList<>();
+
+        try {
+            // Read the response body content
+            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+
+            // Parse JSON response
+            ObjectMapper objectMapper = new ObjectMapper();
+            // Access the "tracks" array
+            JsonNode tracksArray = objectMapper.readTree(responseBody).path("tracks"); //found this JSON reading method online
+
+            // retrieves the id field and stores it
+            for (JsonNode trackNode : tracksArray) {
+                Integer trackPop = trackNode.path("popularity").asInt(); //converts JSON to String
+                trackPops.add(trackPop); // adds to trackIds array
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e); // necessary for the .string() to work
+        }
+
+        return trackPops;
+    }
+
+    public static List<String> getTrackDates(Response response) {
+        List<String> trackDates = new ArrayList<>();
+
+        try {
+            // Read the response body content
+            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+
+            // Parse JSON response
+            ObjectMapper objectMapper = new ObjectMapper();
+            // Access the "tracks" array
+            JsonNode tracksArray = objectMapper.readTree(responseBody).path("tracks"); //found this JSON reading method online
+
+            // retrieves the id field and stores it
+            for (JsonNode trackNode : tracksArray) {
+                String trackDate = trackNode.path("album").path("release_date").asText(); //converts JSON to String
+                trackDates.add(trackDate); // adds to trackIds array
+            }
+
+        } catch (IOException e) {
+            throw new RuntimeException(e); // necessary for the .string() to work
+        }
+
+        return trackDates;
+    }
+
+
 
     public static List<String> getTrackLinks(Response response){
         List<String> trackLinks = new ArrayList<>();
