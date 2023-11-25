@@ -1,4 +1,4 @@
-package use_case.CreateSimilarPlaylists;
+package use_case.getSimilarPlaylists;
 
 import API_calls.GetSimilarPlaylists;
 import okhttp3.OkHttpClient;

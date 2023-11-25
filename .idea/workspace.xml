@@ -5,24 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage.">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/CreateSimilarPlaylists/CreateSimPlaylistsInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/TrackDetails/TrackDetailsInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GeneratePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateUserDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetSimilarPlaylists.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetSimilarPlaylists.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetTrackDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetTrackDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data_access/GetSimilarPlaylists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data_access/GetToken.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data_access/GetTrackDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/data_access/SpotifyApiDataAccessObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/PlaylistsHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/PlaylistsHistory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interface_adapter/GenerateState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interface_adapter/GenerateViewModel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/PromptController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/CreatePlaylist/CreatePlaylistInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/CreateSimilarPlaylists/CreateSimPlaylistsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/CreateSimPlaylistsInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylistInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/merge/MergePlaylistInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/TrackDetails/TrackDetailsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/TrackDetailsInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/enterPrompt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GenerateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GenerateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/use_case/MergePlaylists/merge_playlist.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +37,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,10 +49,14 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2Y98PBqIoZ8DeqXx8rEShfhTt0b" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -58,7 +67,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "SylviaDuan",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,13 +85,13 @@
       <recent name="data_access" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TrackDetailsInteractor">
-    <configuration name="CreatePlaylistInteractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="use_case.CreatePlaylist.CreatePlaylistInteractor" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="CreatePlaylistHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="use_case.generate.CreatePlaylistHelper" />
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.CreatePlaylist.*" />
+          <option name="PATTERN" value="use_case.generate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,11 +100,11 @@
       </method>
     </configuration>
     <configuration name="CreateSimPlaylistsInteractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="use_case.CreateSimilarPlaylists.CreateSimPlaylistsInteractor" />
+      <option name="MAIN_CLASS_NAME" value="use_case.getSimilarPlaylists.CreateSimPlaylistsInteractor" />
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.CreateSimilarPlaylists.*" />
+          <option name="PATTERN" value="use_case.getSimilarPlaylists.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -118,6 +127,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="app.Main" />
+      <module name="SpotifyApiPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SpotifyApiDataAccessObject" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -133,11 +155,11 @@
       </method>
     </configuration>
     <configuration name="TrackDetailsInteractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="use_case.TrackDetails.TrackDetailsInteractor" />
+      <option name="MAIN_CLASS_NAME" value="use_case.getTrackDetails.TrackDetailsInteractor" />
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.TrackDetails.*" />
+          <option name="PATTERN" value="use_case.getTrackDetails.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -160,9 +182,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.TrackDetailsInteractor" />
         <item itemvalue="Application.CreateSimPlaylistsInteractor" />
-        <item itemvalue="Application.CreatePlaylistInteractor" />
+        <item itemvalue="Application.CreatePlaylistHelper" />
       </list>
     </recent_temporary>
   </component>

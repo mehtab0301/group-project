@@ -1,9 +1,7 @@
-package use_case.MergePlaylists;
+package use_case.merge;
 
 import entity.Playlist;
-import entity.PlaylistsHistory;
 import data_access.PlaylistHistoryAccess;
-import data_access.PlaylistAccess;
 import entity.Song;
 
 import java.util.ArrayList;
