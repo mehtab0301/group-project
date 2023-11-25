@@ -1,4 +1,4 @@
-package use_case.CreatePlaylist;
+package use_case.generate;
 
 import API_calls.GetToken;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -11,18 +11,20 @@ import java.util.List;
 import java.util.Objects;
 import API_calls.GetPlaylist;
 
-public class CreatePlaylistInteractor {
+public class CreatePlaylistHelper {
 
     private static final String token = GetToken.getToken();
-    static int popularity = 5;
-    static float energy = 0.5F;
-    static float speechiness = 0.5F;
-    static float valence = 0.5F;
-    static float danceability = 0.5F;
-    static int num_of_tracks = 2;
-    static String genre = "rock";
-    public List<Object> generatePlaylists() throws IOException {
-        ArrayList<Object> api_call = GetPlaylist.getPlaylistCall(popularity, energy, speechiness, valence, danceability, num_of_tracks, genre);
+    static int popularity;
+    static float energy;
+    static float speechiness;
+    static float valence;
+    static float danceability;
+    static int num_of_tracks;
+    static String genre;
+    public List<Object> generatePlaylists(String genre, int popularity, float danceability, float valence,
+                                          float speechiness, float energy) throws IOException {
+        ArrayList<Object> api_call = GetPlaylist.getPlaylistCall(popularity, energy, speechiness, valence,
+                danceability, num_of_tracks, genre);
         OkHttpClient client = (OkHttpClient) api_call.get(0);
         Request request = (Request) api_call.get(1); //info from api_call method
 

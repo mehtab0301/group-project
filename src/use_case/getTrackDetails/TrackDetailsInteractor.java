@@ -1,4 +1,4 @@
-package use_case.TrackDetails;
+package use_case.getTrackDetails;
 
 import API_calls.GetTrackDetails;
 import okhttp3.OkHttpClient;
@@ -10,7 +10,6 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 public class TrackDetailsInteractor {
 
