@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Song {
 
     private final String name;
-    private final String artist;
+    private final ArrayList<String> artist;
     private final int popularity;
     private final String link;
 
     private final ArrayList<SimilarPlaylists> playlists;
 
-    Song(String name, String artist, int popularity, String link, ArrayList<SimilarPlaylists> playlists) {
+    public Song(String name, ArrayList<String> artist, int popularity, String link, ArrayList<SimilarPlaylists> playlists) {
         this.name = name;
         this.artist = artist;
         this.popularity = popularity;
@@ -23,7 +23,7 @@ public class Song {
         return name;
     }
 
-    public String getArtist() {
+    public ArrayList<String> getArtist() {
         return artist;
     }
 

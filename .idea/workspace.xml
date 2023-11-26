@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the entities, created the data storage objects and did the mergePlaylists interactor.">
-      <change afterPath="$PROJECT_DIR$/src/use_case/CreatePlaylist/CreatePlaylistInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyApiPractice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetPlaylist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetTrackDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetTrackDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataBase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataBase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data_access/GetSimilarPlaylists.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data_access/GetTrackDetails.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data_access/SpotifyApiDataAccessObject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/PlaylistsHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/PlaylistsHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/src/use_case/merge_playlist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +70,20 @@
       <recent name="data_access" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GetSimilarPlaylists">
+  <component name="RunManager">
+    <configuration name="CardLayoutExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Examples.CardLayoutExample" />
+      <module name="SpotifyApiPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="GetSimilarPlaylists" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -103,6 +126,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CardLayoutExample" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
