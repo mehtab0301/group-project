@@ -305,6 +305,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         this.add(buttons);
     }
 
+
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -318,7 +319,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
     @Override
     public void stateChanged(ChangeEvent e) {
     }
-
 //        popularity_index.setText("value of Popularity chosen is = " + popularity.getValue());
 //        danceability_index.setText("value of Danceability chosen is = " + danceability.getValue());
 //        valence_index.setText("value of Valence chosen is = " + (double) valence.getValue() / 100);

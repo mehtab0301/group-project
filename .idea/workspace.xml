@@ -4,30 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage.">
-      <change afterPath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GeneratePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateUserDataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Creating the merge button in the first view">
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getSimilarPlaylists/getPlaylistsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getSimilarPlaylists/getPlaylistsPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getSimilarPlaylists/getSimilarState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/merge/MergeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/merge/MergePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimOutputData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/PromptController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/CreatePlaylist/CreatePlaylistInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/CreateSimilarPlaylists/CreateSimPlaylistsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/CreateSimPlaylistsInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylistInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/merge/MergePlaylistInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/TrackDetails/TrackDetailsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/TrackDetailsInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/enterPrompt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyApiPractice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate_playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate_playlist.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/GenerateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GenerateView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Song.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/interface_adapter/generate/GenerateState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +59,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -309,6 +306,7 @@
     <MESSAGE value="Updated the entities" />
     <MESSAGE value="Updated the entities, created the data storage objects and did the mergePlaylists interactor." />
     <MESSAGE value="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage." />
+    <MESSAGE value="Creating the merge button in the first view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating the merge button in the first view" />
   </component>
 </project>
