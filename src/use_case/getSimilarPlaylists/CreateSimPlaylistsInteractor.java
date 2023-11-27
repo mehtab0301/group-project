@@ -16,9 +16,12 @@ import static API_calls.GetSimilarPlaylists.numOfPlaylists;
 
 public class CreateSimPlaylistsInteractor {
 
-    static String songName = "Another Brick in the Wall";
+    static String songName;
+
+    // used playlist interactor to generate the song name
 
     public List<String> createSimilarPlaylists(String name) throws IOException {
+        this.songName = name;
         List<Object> getApiCall = GetSimilarPlaylists.getPlaylistApi(songName);
         //get requests necessary for execution
         OkHttpClient client = (OkHttpClient) getApiCall.get(0);
