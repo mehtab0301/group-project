@@ -1,32 +1,52 @@
 package interface_adapter.generate;
 
 public class GenerateState {
-    private String prompt = "";
-    private String promptError = null;
+    private String genre = "";
+    private int popularity = 0;
+    private float danceability = 0.0F;
+    private float valence = 0.0F;
+    private float speechiness = 0.0F;
+    private float energy = 0.0F;
+    private int numberOfTracks = 0;
 
     public GenerateState(GenerateState copy) {
-        prompt = copy.prompt;
-        promptError = copy.promptError;;
+        genre = copy.genre;
+        popularity = copy.popularity;
+        danceability = copy.danceability;
+        valence = copy.valence;
+        speechiness = copy.speechiness;
+        energy = copy.energy;
+        numberOfTracks = copy.numberOfTracks;
     }
 
     public GenerateState() {
     }
 
-    public String getPrompt() {
-        return prompt;
-    }
+    public String getGenre() { return genre; }
 
-    public String getPromptError() {
-        return promptError;
-    }
+    public int getPopularity() { return popularity; }
 
-    public void setPrompt(String prompt) { this.prompt = prompt; }
+    public float getDanceability() { return danceability; }
 
-    public void setPromptError(String promptError) { this.promptError = promptError; }
+    public float getValence() { return valence; }
 
-    @Override
-    public String toString() {
-        return "GenerateState{" +
-                "prompt='" + prompt + '}';
-    }
+    public float getSpeechiness() { return speechiness; }
+
+    public float getEnergy() { return energy; }
+
+    public int getNumberOfTracks() { return numberOfTracks; }
+
+    public void setGenre(String genre) { this.genre = genre; }
+
+    public void setPopularity(int popularity) { this.popularity = popularity; }
+
+    public void setDanceability(float danceability) { this.danceability = danceability; }
+
+    public void setValence(float valence) { this.valence = valence; }
+
+    public void setSpeechiness(float speechiness) { this.speechiness = speechiness; }
+
+    public void setEnergy(float energy) { this.energy = energy; }
+
+    public void setNumberOfTracks(int numberOfTracks) { this.numberOfTracks = numberOfTracks; }
 }

@@ -26,7 +26,7 @@ public class Main {
         new ViewManager(views, cardLayout, viewManagerModel);
 
         GenerateViewModel generateViewModel = new GenerateViewModel();
-        GenerateView generateView = new GenerateView(generateViewModel);
+        GenerateView generateView = GenerateUseCaseFactory.create(viewManagerModel, generateViewModel);
         views.add(generateView, generateView.viewName);
 
         // Temporary input formats use for changing views
