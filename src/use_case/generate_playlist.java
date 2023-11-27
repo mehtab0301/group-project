@@ -25,7 +25,6 @@ public class generate_playlist extends GenerateView {
         this.valence = selectedValence;
         this.speechiness = selectedSpeechiness;
         this.energy = selectedEnergy;
-        //this.genre =
 
 
 
