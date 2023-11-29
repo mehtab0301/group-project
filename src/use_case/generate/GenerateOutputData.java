@@ -1,16 +1,14 @@
 package use_case.generate;
 
-import entity.Song;
-
-import java.util.List;
+import entity.Playlist;
 
 public class GenerateOutputData {
 
-    private final List<Object> trackList;
+    private final Playlist playlist;
 
-    public GenerateOutputData(List<Object> trackList) {
-        this.trackList = trackList;
+    public GenerateOutputData(Playlist playlist) {
+        this.playlist = playlist;
     }
 
-    public List<Object> getTrackList() { return trackList; }
+    public Playlist getTrackList() { return playlist; }
 }

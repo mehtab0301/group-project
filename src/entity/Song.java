@@ -1,21 +1,26 @@
 package entity;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 public class Song {
 
     private final String name;
-    private final String artist;
+    private final List<String> artist;
     private final int popularity;
     private final String link;
 
-    private final ArrayList<SimilarPlaylists> playlists;
+    private final String date;
 
-    Song(String name, String artist, int popularity, String link, ArrayList<SimilarPlaylists> playlists) {
+    private final Optional<ArrayList<SimilarPlaylists>> playlists;
+
+    public Song(String name, List<String> artist, int popularity, String link, String date, Optional<ArrayList<SimilarPlaylists>> playlists) {
         this.name = name;
         this.artist = artist;
         this.popularity = popularity;
         this.link = link;
+        this.date = date;
         this.playlists = playlists;
     }
 
@@ -23,7 +28,7 @@ public class Song {
         return name;
     }
 
-    public String getArtist() {
+    public List<String> getArtist() {
         return artist;
     }
 
@@ -31,7 +36,7 @@ public class Song {
         return popularity;
     }
 
-    public ArrayList<SimilarPlaylists> getSimilarPlaylists() {
+    public Optional<ArrayList<SimilarPlaylists>> getSimilarPlaylists() {
         return playlists;
     }
 

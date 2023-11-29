@@ -3,6 +3,9 @@ package use_case.generate;
 import API_calls.GetToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import entity.Playlist;
+import entity.PlaylistsHistory;
+import entity.Song;
 import okhttp3.*;
 
 import java.io.IOException;
@@ -21,8 +24,8 @@ public class CreatePlaylistHelper {
     static float danceability;
     static int num_of_tracks;
     static String genre;
-    public List<Object> generatePlaylists(String genre, int popularity, float danceability, float valence,
-                                          float speechiness, float energy) throws IOException {
+    public Playlist generatePlaylists(String genre, int popularity, float danceability, float valence,
+                                              float speechiness, float energy) throws IOException {
         ArrayList<Object> api_call = GetPlaylist.getPlaylistCall(popularity, energy, speechiness, valence,
                 danceability, num_of_tracks, genre);
         OkHttpClient client = (OkHttpClient) api_call.get(0);
@@ -42,6 +45,13 @@ public class CreatePlaylistHelper {
         songItems.add(trackDates);
         List<Integer> trackPopularities = getTrackPopularities(tracks);
         songItems.add(trackPopularities);
+
+        ArrayList<Song> songs = new ArrayList<>();
+        for (int i = 0; i < trackArtists.size(); i++) {
+            Song song = new Song(trackNames.get(i), trackArtists.get(i), trackPopularities.get(i), trackLinks.get(i), trackDates.get(i), null);
+            songs.add(song);
+        }
+        Playlist playlist = new Playlist(songs);
         //System.out.println(trackNames);
 
         try {
@@ -58,7 +68,7 @@ public class CreatePlaylistHelper {
         } finally {
             tracks.close(); //avoids potential errors of closing prematurely (I don't remember exactly, but it could contribute to 400 code)
         } //should be done last! .close, closes tracks and becomes unreadable. Also note .string() does the same thing
-        return songItems;
+        return playlist;
     }
     public static List<List<String>> getTrackArtists(Response response) {
         List<List<String>> trackArtists = new ArrayList<>();
