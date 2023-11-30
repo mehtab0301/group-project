@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_22_23__3_39PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsInteractor.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,7 +67,7 @@
       <recent name="data_access" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.GetSimilarPlaylists">
     <configuration name="CardLayoutExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Examples.CardLayoutExample" />
       <module name="SpotifyApiPractice" />
@@ -140,7 +146,8 @@
       <workItem from="1700534363423" duration="592000" />
       <workItem from="1700610717712" duration="13270000" />
       <workItem from="1700666467432" duration="1895000" />
-      <workItem from="1701116872748" duration="13279000" />
+      <workItem from="1701116872748" duration="13461000" />
+      <workItem from="1701370950043" duration="4126000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -222,7 +229,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701370480048</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists">
+      <option name="closed" value="true" />
+      <created>1701370749820</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701370749820</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists">
+      <option name="closed" value="true" />
+      <created>1701370971687</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701370971687</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

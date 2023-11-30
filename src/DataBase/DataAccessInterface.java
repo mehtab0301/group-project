@@ -50,7 +50,7 @@ public class DataAccessInterface {
             String stringLink = ((String) link);
             GetTrackDetails apiCaller = new GetTrackDetails(stringLink);
             ArrayList<Object> trackInfo = apiCaller.getTrackInfo();
-            Song song = new Song((String) trackInfo.get(0),(ArrayList<String>) trackInfo.get(1), (int) trackInfo.get(2), (String) trackInfo.get(4), null);
+            Song song = new Song((String) trackInfo.get(0),(ArrayList<String>) trackInfo.get(1), (int) trackInfo.get(2), (String) trackInfo.get(4));
             songs.add(song);
             }
 
