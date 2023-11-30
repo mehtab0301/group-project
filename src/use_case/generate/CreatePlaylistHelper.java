@@ -17,6 +17,7 @@ import API_calls.GetPlaylist;
 public class CreatePlaylistHelper {
 
     private static final String token = GetToken.getToken();
+    /*
     static int popularity;
     static float energy;
     static float speechiness;
@@ -24,26 +25,28 @@ public class CreatePlaylistHelper {
     static float danceability;
     static int num_of_tracks;
     static String genre;
+    */
     public Playlist generatePlaylists(String genre, int popularity, float danceability, float valence,
-                                              float speechiness, float energy) throws IOException {
+                                      float speechiness, float energy, int num_of_tracks) throws IOException {
         ArrayList<Object> api_call = GetPlaylist.getPlaylistCall(popularity, energy, speechiness, valence,
                 danceability, num_of_tracks, genre);
         OkHttpClient client = (OkHttpClient) api_call.get(0);
         Request request = (Request) api_call.get(1); //info from api_call method
 
         Response tracks = client.newCall(request).execute(); // stores the tracks in a Response Object (standard practice, not exactly sure)
-        //System.out.println(tracks.body().string()); //note, whenever the .string() thing is run, it closes tracks, and it becomes unreadable from then on
 
+        //System.out.println(tracks.body().string()); //note, whenever the .string() thing is run, it closes tracks, and it becomes unreadable from then on
+        String responseBody = Objects.requireNonNull(tracks.body()).string();
         List<Object> songItems = new ArrayList<>();
-        List<String> trackNames = getTrackNames(tracks);
+        List<String> trackNames = getTrackNames(responseBody);
         songItems.add(trackNames);
-        List<List<String>> trackArtists = getTrackArtists(tracks);
+        List<List<String>> trackArtists = getTrackArtists(responseBody);
         songItems.add(trackArtists);
-        List<String> trackLinks = getTrackLinks(tracks);
+        List<String> trackLinks = getTrackLinks(responseBody);
         songItems.add(trackLinks);
-        List<String> trackDates = getTrackDates(tracks);
+        List<String> trackDates = getTrackDates(responseBody);
         songItems.add(trackDates);
-        List<Integer> trackPopularities = getTrackPopularities(tracks);
+        List<Integer> trackPopularities = getTrackPopularities(responseBody);
         songItems.add(trackPopularities);
 
         ArrayList<Song> songs = new ArrayList<>();
@@ -56,11 +59,10 @@ public class CreatePlaylistHelper {
 
         try {
             System.out.println("Response Code: " + tracks.code());
-            ResponseBody responseBody = tracks.body();
+            //ResponseBody responseBody = tracks.body();
             if (!tracks.isSuccessful()) {
-                String errorBody = responseBody.string();
                 System.out.println("Request failed with code: " + tracks.code());
-                System.out.println("Error Body: " + errorBody);
+                System.out.println("Error Body: " + responseBody);
                 throw new RuntimeException("Check that the genre is input or that the token is refreshed");
             }
 
@@ -70,12 +72,12 @@ public class CreatePlaylistHelper {
         } //should be done last! .close, closes tracks and becomes unreadable. Also note .string() does the same thing
         return playlist;
     }
-    public static List<List<String>> getTrackArtists(Response response) {
+    public static List<List<String>> getTrackArtists(String responseBody) {
         List<List<String>> trackArtists = new ArrayList<>();
 
         try {
             // Read the response body content
-            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+            //String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
 
             // Parse JSON response
             ObjectMapper objectMapper = new ObjectMapper();
@@ -98,12 +100,12 @@ public class CreatePlaylistHelper {
         return trackArtists;
     }
 
-    public static List<String> getTrackNames(Response response) {
+    public static List<String> getTrackNames(String responseBody) {
         List<String> trackNames = new ArrayList<>();
 
         try {
             // Read the response body content
-            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+            //String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
 
             // Parse JSON response
             ObjectMapper objectMapper = new ObjectMapper();
@@ -123,12 +125,12 @@ public class CreatePlaylistHelper {
 
         return trackNames;
     }
-    public static List<String> getTracks(Response response) {
+    public static List<String> getTracks(String responseBody) {
         List<String> trackIds = new ArrayList<>();
 
         try {
             // Read the response body content
-            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+            //String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
 
             // Parse JSON response
             ObjectMapper objectMapper = new ObjectMapper();
@@ -148,12 +150,12 @@ public class CreatePlaylistHelper {
 
         return trackIds;
     }
-    public static List<Integer> getTrackPopularities(Response response) {
+    public static List<Integer> getTrackPopularities(String responseBody) {
         List<Integer> trackPops = new ArrayList<>();
 
         try {
             // Read the response body content
-            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+            //String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
 
             // Parse JSON response
             ObjectMapper objectMapper = new ObjectMapper();
@@ -173,12 +175,12 @@ public class CreatePlaylistHelper {
         return trackPops;
     }
 
-    public static List<String> getTrackDates(Response response) {
+    public static List<String> getTrackDates(String responseBody) {
         List<String> trackDates = new ArrayList<>();
 
         try {
             // Read the response body content
-            String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
+            //String responseBody = Objects.requireNonNull(response.body()).string(); //Intellij autocorrected
 
             // Parse JSON response
             ObjectMapper objectMapper = new ObjectMapper();
@@ -200,7 +202,7 @@ public class CreatePlaylistHelper {
 
 
 
-    public static List<String> getTrackLinks(Response response){
+    public static List<String> getTrackLinks(String response){
         List<String> trackLinks = new ArrayList<>();
         List<String> local_tracks = getTracks(response);
 
