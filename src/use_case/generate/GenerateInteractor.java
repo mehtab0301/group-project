@@ -1,5 +1,7 @@
 package use_case.generate;
 
+import entity.Playlist;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -15,7 +17,7 @@ public class GenerateInteractor implements GenerateInputBoundary{
 
     @Override
     public void execute(GenerateInputData generateInputData) throws IOException {
-        List<Object> output = createPlaylistHelper.generatePlaylists(generateInputData.getGenre(),
+        Playlist output = createPlaylistHelper.generatePlaylists(generateInputData.getGenre(),
                 generateInputData.getPopularity(),
                 generateInputData.getDanceability(),
                 generateInputData.getValence(),
