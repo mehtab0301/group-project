@@ -25,7 +25,6 @@ public class GetPlaylist
         return returnedList;
     }
 
-
     public static HttpUrl.Builder createURL (){ //not super elegant but gets the job done
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://api.spotify.com/v1/recommendations").newBuilder();
         urlBuilder.addQueryParameter("limit", String.valueOf(num_of_tracks));
