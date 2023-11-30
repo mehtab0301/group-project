@@ -140,7 +140,7 @@
       <workItem from="1700534363423" duration="592000" />
       <workItem from="1700610717712" duration="13270000" />
       <workItem from="1700666467432" duration="1895000" />
-      <workItem from="1701116872748" duration="12931000" />
+      <workItem from="1701116872748" duration="13279000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -214,7 +214,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701369890270</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists">
+      <option name="closed" value="true" />
+      <created>1701370480048</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701370480048</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
