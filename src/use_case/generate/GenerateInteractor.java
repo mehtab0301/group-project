@@ -22,7 +22,8 @@ public class GenerateInteractor implements GenerateInputBoundary{
                 generateInputData.getDanceability(),
                 generateInputData.getValence(),
                 generateInputData.getSpeechiness(),
-                generateInputData.getEnergy());
+                generateInputData.getEnergy(),
+                generateInputData.getNumberOfTracks());
 
         GenerateOutputData generateOutputData = new GenerateOutputData(output);
         userPresenter.prepareSuccessView(generateOutputData);

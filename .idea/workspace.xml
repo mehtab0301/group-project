@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Creating the merge button in the first view">
-      <change afterPath="$PROJECT_DIR$/src/app/SimilarPlaylistUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimPlaylistInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/CreateSimPlaylistsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/CreateSimPlaylistsInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/GenerateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInteractor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +50,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;SylviaDuan&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -167,9 +166,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.CreatePlaylistHelper" />
         <item itemvalue="Application.TrackDetailsInteractor" />
         <item itemvalue="Application.CreateSimPlaylistsInteractor" />
-        <item itemvalue="Application.CreatePlaylistHelper" />
       </list>
     </recent_temporary>
   </component>
@@ -195,6 +194,8 @@
       <workItem from="1700773846534" duration="816000" />
       <workItem from="1700839760360" duration="15000" />
       <workItem from="1700867902242" duration="4716000" />
+      <workItem from="1701365461806" duration="2704000" />
+      <workItem from="1701376037626" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
