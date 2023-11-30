@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists">
-      <change afterPath="$PROJECT_DIR$/src/use_case/CreatePlaylist/CreatePlaylistInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/CreatePlaylist/CreatePlaylistOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylistInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylsitOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/SongInfo/SongInfoInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/SongInfo/SongInfoInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/SongInfo/SongInfoOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetPlaylist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DataBase/DataBase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataBase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/PromptController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylistInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylistInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/enterPrompt.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/generate_playlist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/info_playlist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Song.class" afterDir="false" />
-    </list>
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -164,7 +140,7 @@
       <workItem from="1700534363423" duration="592000" />
       <workItem from="1700610717712" duration="13270000" />
       <workItem from="1700666467432" duration="1895000" />
-      <workItem from="1701116872748" duration="12565000" />
+      <workItem from="1701116872748" duration="12931000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -230,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701036052342</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated the playlist class and GetTrackDetails.java. Finished the DAI now has addUser, addPlaylist, getPlaylist and getAllPlaylists">
+      <option name="closed" value="true" />
+      <created>1701369890270</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701369890270</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

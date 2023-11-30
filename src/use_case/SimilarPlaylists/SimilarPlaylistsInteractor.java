@@ -11,8 +11,5 @@ public class SimilarPlaylistsInteractor {
         this.username = username;
         this.songName = songName;
     }
-    public execute() {
-        GetSimilarPlaylists
 
-    }
 }
