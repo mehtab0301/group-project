@@ -4,20 +4,24 @@ import interface_adapter.ViewManagerModel;
 import interface_adapter.generate.GenerateController;
 import interface_adapter.generate.GeneratePresenter;
 import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.output.OutputViewModel;
 import use_case.generate.*;
 import view.GenerateView;
+import view.MergeView;
 
 import javax.swing.*;
 import java.io.IOException;
 
 public class GenerateUseCaseFactory {
 
-    private GenerateUseCaseFactory() {}
-
-    public static GenerateView create(ViewManagerModel viewManagerModel, GenerateViewModel generateViewModel) {
+    public static GenerateView create(ViewManagerModel viewManagerModel,
+                                      GenerateViewModel generateViewModel,
+                                      OutputViewModel outputViewModel,
+                                      MergeView mergeView) {
 
         try {
-            GenerateController generateController = createUserGenerateUseCase(viewManagerModel, generateViewModel);
+            GenerateController generateController = createUserGenerateUseCase(viewManagerModel, outputViewModel,
+                    mergeView);
             return new GenerateView(generateController, generateViewModel);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "There's an error.");
@@ -27,16 +31,16 @@ public class GenerateUseCaseFactory {
     }
 
     private static GenerateController createUserGenerateUseCase(ViewManagerModel viewManagerModel,
-                                                                GenerateViewModel generateViewModel)
+                                                                OutputViewModel outputViewModel,
+                                                                MergeView mergeView)
             throws IOException {
 
-        GenerateOutputBoundary generateOutputBoundary = new GeneratePresenter(viewManagerModel, generateViewModel);
+        GenerateOutputBoundary generateOutputBoundary = new GeneratePresenter(viewManagerModel, outputViewModel,
+                mergeView);
 
-        CreatePlaylistHelper createPlaylistHelper = new CreatePlaylistHelper();
-
-        GenerateInputBoundary userGenerateInteractor = new GenerateInteractor(generateOutputBoundary,
-                createPlaylistHelper);
+        GenerateInputBoundary userGenerateInteractor = new GenerateInteractor(generateOutputBoundary);
 
         return new GenerateController(userGenerateInteractor);
     }
 }
+

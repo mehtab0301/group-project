@@ -4,7 +4,6 @@ import API_calls.GetToken;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entity.Playlist;
-import entity.PlaylistsHistory;
 import entity.Song;
 import okhttp3.*;
 
@@ -17,19 +16,11 @@ import API_calls.GetPlaylist;
 public class CreatePlaylistHelper {
 
     private static final String token = GetToken.getToken();
-    /*
-    static int popularity;
-    static float energy;
-    static float speechiness;
-    static float valence;
-    static float danceability;
-    static int num_of_tracks;
-    static String genre;
-    */
-    public Playlist generatePlaylists(String genre, int popularity, float danceability, float valence,
-                                      float speechiness, float energy, int num_of_tracks) throws IOException {
+
+    public static Playlist generatePlaylists(String genre, int popularity, float danceability, float valence,
+                                             float speechiness, float energy, int numOfTracks) throws IOException {
         ArrayList<Object> api_call = GetPlaylist.getPlaylistCall(popularity, energy, speechiness, valence,
-                danceability, num_of_tracks, genre);
+                danceability, numOfTracks, genre);
         OkHttpClient client = (OkHttpClient) api_call.get(0);
         Request request = (Request) api_call.get(1); //info from api_call method
 
