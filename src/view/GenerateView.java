@@ -84,10 +84,12 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         genreBox.add(genre);
         genreBox.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        final Boolean[] isButtonClickedGenre = {false};
         genre.addActionListener(
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        isButtonClickedGenre[0] = true;
                         GenerateState currentState = generateViewModel.getState();
                         String genreSelected = (String) genre.getSelectedItem();
                         currentState.setGenre(genreSelected);
@@ -95,6 +97,13 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     }
                 }
         );
+        if (!isButtonClickedGenre[0]){
+            GenerateState currentState = generateViewModel.getState();
+            genre.setSelectedItem("Acoustic");
+            String genreSelected = (String) genre.getSelectedItem();
+            currentState.setGenre(genreSelected);
+            generateViewModel.setState(currentState);
+        }
 
         // Popularity Index Slider
         popularity.setBorder(BorderFactory.createTitledBorder("Choose desired Popularity index:"));
@@ -237,6 +246,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
         numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
 
+        final Boolean[] isButtonClickedTracks = {false};
         numTracksField.addKeyListener(
                 new KeyListener() {
                     @Override
@@ -256,6 +266,13 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     }
                 }
         );
+        if (!isButtonClickedTracks[0]){
+            GenerateState currentState = generateViewModel.getState();
+            int numberOfTracks = 1;
+            currentState.setNumberOfTracks(numberOfTracks);
+            generateViewModel.setState(currentState);
+        }
+
 
         // Button for generating the playlist
         JPanel buttons = new JPanel();
@@ -318,16 +335,4 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
     @Override
     public void stateChanged(ChangeEvent e) {
     }
-
-//        popularity_index.setText("value of Popularity chosen is = " + popularity.getValue());
-//        danceability_index.setText("value of Danceability chosen is = " + danceability.getValue());
-//        valence_index.setText("value of Valence chosen is = " + (double) valence.getValue() / 100);
-//        speechiness_index.setText("value of Speechiness chosen is = " + (double) speechiness.getValue() / 100);
-//        energy_index.setText("value of Energy chosen is = " + (double) energy.getValue() / 100);
-//
-//        selectedPopularityLevel = popularity.getValue();
-//        selectedDanceability = danceability.getValue();
-//        selectedValence = valence.getValue();
-//        selectedSpeechiness = speechiness.getValue();
-//        selectedEnergy = energy.getValue();
 }

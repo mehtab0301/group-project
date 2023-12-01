@@ -1,7 +1,7 @@
 package use_case.generate;
 
-import entity.PlaylistsHistory;
+import data_access.PlaylistHistoryAccess;
 
 public interface GenerateUserDataAccessInterface {
-    void save(PlaylistsHistory playlistsHistory);
+    void save(PlaylistHistoryAccess playlistsHistory);
 }

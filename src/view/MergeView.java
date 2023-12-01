@@ -1,8 +1,10 @@
 package view;
 
+import data_access.PlaylistHistoryAccess;
 import entity.Playlist;
 import interface_adapter.ViewManagerModel;
 import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.merge.MergeController;
 import interface_adapter.output.OutputViewModel;
 import interface_adapter.output.OutputViewState;
 
@@ -12,29 +14,46 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
 
-public class OutputView extends JPanel implements ActionListener, PropertyChangeListener {
-
-    public final String viewName = "output";
-
-    public final JLabel title = new JLabel();
-
-    public final JButton generateAgain;
+public class MergeView extends JPanel implements ActionListener, PropertyChangeListener {
+    public final String viewName = "merge";
 
     private final OutputViewModel outputViewModel;
     private final ViewManagerModel viewManagerModel;
     private final GenerateViewModel generateViewModel;
 
-    public OutputView(OutputViewModel outputViewModel, ViewManagerModel viewManagerModel,
-                      GenerateViewModel generateViewModel) {
+    private final MergeController mergeController;
+
+    public final JButton merge;
+    public final JButton generateAgain;
+
+    public MergeView(OutputViewModel outputViewModel, ViewManagerModel viewManagerModel,
+                     GenerateViewModel generateViewModel, MergeController mergeController) {
         this.outputViewModel = outputViewModel;
         outputViewModel.addPropertyChangeListener(this);
 
         this.viewManagerModel = viewManagerModel;
         this.generateViewModel = generateViewModel;
+        generateViewModel.addPropertyChangeListener(this);
 
-        title.setText(OutputViewModel.TITLE_LABEL);
-        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        this.mergeController = mergeController;
+
+        merge = new JButton("Merge with previous playlist(s)");
+        merge.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (e.getSource().equals(merge)) {
+                            try {
+                                mergeController.execute(PlaylistHistoryAccess.getPlaylists());
+                            } catch (IOException ex) {
+                                throw new RuntimeException(ex);
+                            }
+                        }
+                    }
+                }
+        );
 
         generateAgain = new JButton(OutputViewModel.GENERATE_ANOTHER_BUTTON_LABEL);
         generateAgain.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -60,6 +79,9 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         this.removeAll();
+
+        JLabel title = new JLabel(OutputViewModel.TITLE_LABEL);
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.add(title);
 
         OutputViewState state = (OutputViewState) evt.getNewValue();
@@ -82,6 +104,10 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
 
             this.add(song);
         }
-        this.add(generateAgain);
+        JPanel buttons = new JPanel();
+        buttons.setAlignmentX(Component.CENTER_ALIGNMENT);
+        buttons.add(merge);
+        buttons.add(generateAgain);
+        this.add(buttons);
     }
 }
