@@ -78,16 +78,16 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                 "soul", "soundtracks", "spanish", "study", "summer", "swedish", "synth-pop", "tango", "techno"};
 
         genre = new JComboBox(genreList);
-
         JPanel genreBox = new JPanel();
         genreBox.add(new JLabel(GenerateViewModel.GENRE_LABEL));
         genreBox.add(genre);
         genreBox.setAlignmentX(Component.CENTER_ALIGNMENT);
-
+        final Boolean[] isButtonClickedGenre = {false};
         genre.addActionListener(
                 new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        isButtonClickedGenre[0] = true;
                         GenerateState currentState = generateViewModel.getState();
                         String genreSelected = (String) genre.getSelectedItem();
                         currentState.setGenre(genreSelected);
@@ -95,6 +95,14 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     }
                 }
         );
+        if (!isButtonClickedGenre[0]){
+            GenerateState currentState = generateViewModel.getState();
+            genre.setSelectedItem("Acoustic");
+            String genreSelected = (String) genre.getSelectedItem();
+            currentState.setGenre(genreSelected);
+            generateViewModel.setState(currentState);
+        }
+
 
         // Popularity Index Slider
         popularity.setBorder(BorderFactory.createTitledBorder("Choose desired Popularity index:"));
@@ -102,7 +110,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         popularity.setMajorTickSpacing(10);
         popularity.setPaintTicks(true);
         popularity.setPaintLabels(true);
-
         popularity.addChangeListener(
                 new ChangeListener() {
                     @Override
@@ -134,7 +141,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         danceability.setLabelTable(labelTable);
         danceability.setPaintTicks(true);
         danceability.setPaintLabels(true);
-
         danceability.addChangeListener(
                 new ChangeListener() {
                     @Override
@@ -236,11 +242,12 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         // Input field for user to enter number of tracks they want in the playlist
         LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
         numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
-
+        final Boolean[] isButtonClickedTracks = {false};
         numTracksField.addKeyListener(
                 new KeyListener() {
                     @Override
                     public void keyTyped(KeyEvent e) {
+                        isButtonClickedTracks[0] = true;
                         GenerateState currentState = generateViewModel.getState();
                         int numberOfTracks = Integer.valueOf(numTracksField.getText() + e.getKeyChar());
                         currentState.setNumberOfTracks(numberOfTracks);
@@ -256,6 +263,12 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     }
                 }
         );
+        if (!isButtonClickedTracks[0]){
+            GenerateState currentState = generateViewModel.getState();
+            int numberOfTracks = 1;
+            currentState.setNumberOfTracks(numberOfTracks);
+            generateViewModel.setState(currentState);
+        }
 
         // Button for generating the playlist
         JPanel buttons = new JPanel();
