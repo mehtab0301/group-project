@@ -4,10 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Fixed the getArtists bug">
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage.">
+      <change afterPath="$PROJECT_DIR$/src/app/LoginUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/MergeUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/SignupUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data_access/UserDataAccessObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/CommonUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/CommonUserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/entity/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateUserDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/merge/MergeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/merge/MergePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/signup/SignupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/signup/SignupPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/signup/SignupState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/signup/SignupViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/login/LoginUserDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/merge/MergeInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/merge/MergeInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/merge/MergeInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/merge/MergeOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/merge/MergeOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/signup/SignupUserDataAccessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/MenuView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/MergeView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/SignupView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/GenerateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GenerateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Examples/CardLayoutExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Examples/SwitchingCardsExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/PlaylistAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/PlaylistHistoryAccess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/PlaylistHistoryAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/SongDataAccess.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/PlaylistsHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/FinalViewModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/GeneratePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GeneratePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/login/LoginState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/login/LoginState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/GenerateInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/GenerateUserDataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateUserDataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate_playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/info_playlist.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/merge/MergePlaylistInteractor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/OutputView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/OutputView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SecondView.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +83,11 @@
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -36,34 +100,48 @@
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2Y98PBqIoZ8DeqXx8rEShfhTt0b" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "SylviaDuan",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/group-project/src/use_case",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="idk" />
       <recent name="SpotifyApiDataAccessObject" />
       <recent name="" />
       <recent name="data_access" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\login" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\merge" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\interface_adapter\signup" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\interface_adapter\output" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app" />
+      <recent name="view" />
+      <recent name="interface_adapter.generate" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -164,9 +242,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.CreatePlaylistHelper" />
         <item itemvalue="Application.TrackDetailsInteractor" />
         <item itemvalue="Application.CreateSimPlaylistsInteractor" />
+        <item itemvalue="Application.CreatePlaylistHelper" />
       </list>
     </recent_temporary>
   </component>
@@ -192,9 +270,6 @@
       <workItem from="1700773846534" duration="816000" />
       <workItem from="1700839760360" duration="15000" />
       <workItem from="1700867902242" duration="4716000" />
-      <workItem from="1701365461806" duration="2704000" />
-      <workItem from="1701376037626" duration="767000" />
-      <workItem from="1701379419628" duration="4921000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -260,15 +335,7 @@
       <option name="project" value="LOCAL" />
       <updated>1700769150752</updated>
     </task>
-    <task id="LOCAL-00009" summary="Fixed the getArtists bug">
-      <option name="closed" value="true" />
-      <created>1701376645423</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1701376645423</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -301,8 +368,6 @@
     <MESSAGE value="Updated the entities" />
     <MESSAGE value="Updated the entities, created the data storage objects and did the mergePlaylists interactor." />
     <MESSAGE value="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage." />
-    <MESSAGE value="Creating the merge button in the first view" />
-    <MESSAGE value="Fixed the getArtists bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the getArtists bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage." />
   </component>
 </project>
