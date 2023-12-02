@@ -16,7 +16,7 @@ public class GetPlaylist
     public static ArrayList<Object> getPlaylistCall(int popularity, float energy, float speechiness, float valence, float danceability,
                                                     int num_of_tracks, String genre) throws IOException {
         OkHttpClient client = (new OkHttpClient()).newBuilder().build(); //builds an http request
-        HttpUrl.Builder urlBuilder = createURL(); //creates the string (see method below)
+        HttpUrl.Builder urlBuilder = createURL(popularity, energy, speechiness, valence, danceability, num_of_tracks, genre); //creates the string (see method below)
         Request request = (new Request.Builder()).url(urlBuilder.build()).get().addHeader("Authorization", "Bearer " + token ).build();
         //System.out.println(request); (sends a GET request to get a JSON collection of tracks)
         ArrayList <Object> returnedList = new ArrayList<>();
@@ -25,7 +25,9 @@ public class GetPlaylist
         return returnedList;
     }
 
-    public static HttpUrl.Builder createURL (){ //not super elegant but gets the job done
+
+    public static HttpUrl.Builder createURL (int popularity, float energy, float speechiness, float valence, float danceability,
+                                             int num_of_tracks, String genre){ //not super elegant but gets the job done
         HttpUrl.Builder urlBuilder = HttpUrl.parse("https://api.spotify.com/v1/recommendations").newBuilder();
         urlBuilder.addQueryParameter("limit", String.valueOf(num_of_tracks));
         urlBuilder.addQueryParameter("max_popularity", String.valueOf(popularity));
