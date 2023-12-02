@@ -4,18 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Fixed the getArtists bug">
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Update generate use case">
+      <change afterPath="$PROJECT_DIR$/src/app/GetTrackDetailsUseCaseFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/trackDetails/TrackDetailsState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/interface_adapter/trackDetails/TrackDetailsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsOutputData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/GetTrackDetailsView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/TrackDetailsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_24_20_43_[Changes]/GenerateState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_24_20_43_[Changes]/GenerateView.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyApiPractice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/SimilarPlaylistUseCaseFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/FirstViewModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/playlistController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/playlistPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/getSimilarPlaylists/getPlaylistsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/getSimilarPlaylists/getPlaylistsPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/CreatePlaylistHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/generate_playlist.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/FirstView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data_access/UserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/UserDataAccessObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/getTrackDetails/TrackDetailsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GenerateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GenerateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +53,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -60,6 +75,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "UpdateAll",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/group-project/src/view",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -74,6 +90,14 @@
       <recent name="SpotifyApiDataAccessObject" />
       <recent name="" />
       <recent name="data_access" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\view" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\interface_adapter" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getTrackDetails" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="app" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -118,6 +142,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GetTrackDetailsHelper" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="use_case.getTrackDetails.GetTrackDetailsHelper" />
+      <module name="SpotifyApiPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.getTrackDetails.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.Main" />
       <module name="SpotifyApiPractice" />
@@ -145,19 +182,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrackDetailsInteractor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="use_case.getTrackDetails.TrackDetailsInteractor" />
-      <module name="SpotifyApiPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="use_case.getTrackDetails.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Group_spotify" />
       <method v="2">
@@ -175,7 +199,7 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.CreatePlaylistHelper" />
-        <item itemvalue="Application.TrackDetailsInteractor" />
+        <item itemvalue="Application.GetTrackDetailsHelper" />
         <item itemvalue="Application.CreateSimPlaylistsInteractor" />
       </list>
     </recent_temporary>
@@ -205,6 +229,9 @@
       <workItem from="1701365461806" duration="2704000" />
       <workItem from="1701376037626" duration="767000" />
       <workItem from="1701379419628" duration="4921000" />
+      <workItem from="1701481606407" duration="399000" />
+      <workItem from="1701482951429" duration="1658000" />
+      <workItem from="1701485374309" duration="7153000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -278,7 +305,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701376645423</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update generate use case">
+      <option name="closed" value="true" />
+      <created>1701471719195</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1701471719195</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,6 +348,7 @@
     <MESSAGE value="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage." />
     <MESSAGE value="Creating the merge button in the first view" />
     <MESSAGE value="Fixed the getArtists bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the getArtists bug" />
+    <MESSAGE value="Update generate use case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update generate use case" />
   </component>
 </project>

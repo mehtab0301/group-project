@@ -55,9 +55,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         this.generateViewModel = generateViewModel;
         generateViewModel.addPropertyChangeListener(this);
 
-        // Creating variables to store the selected information about the user
-
-
         // Title for the pop-up
         JLabel title = new JLabel(GenerateViewModel.TITLE_LABEL);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);

@@ -3,9 +3,11 @@ package app;
 import data_access.UserDataAccessObject;
 import entity.CommonUserFactory;
 import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.getTrackDetails.GetTrackDetailsViewModel;
 import interface_adapter.login.LoginViewModel;
 import interface_adapter.output.OutputViewModel;
 import interface_adapter.signup.SignupViewModel;
+import interface_adapter.trackDetails.TrackDetailsViewModel;
 import view.*;
 import interface_adapter.ViewManagerModel;
 
@@ -29,11 +31,13 @@ public class Main {
         SignupViewModel signupViewModel = new SignupViewModel();
         LoginViewModel loginViewModel = new LoginViewModel();
         GenerateViewModel generateViewModel = new GenerateViewModel();
+        GetTrackDetailsViewModel getTrackDetailsViewModel = new GetTrackDetailsViewModel();
+        TrackDetailsViewModel trackDetailsViewModel = new TrackDetailsViewModel();
         OutputViewModel outputViewModel = new OutputViewModel();
 
         UserDataAccessObject userDataAccessObject = new UserDataAccessObject(new CommonUserFactory());
 
-        MenuView menuView = new MenuView(generateViewModel, viewManagerModel);
+        MenuView menuView = new MenuView(generateViewModel, getTrackDetailsViewModel, viewManagerModel);
         views.add(menuView, menuView.viewName);
 
         LoginView loginView = LoginUseCaseFactory.create(viewManagerModel, loginViewModel, menuView,
@@ -47,6 +51,9 @@ public class Main {
         OutputView outputView = new OutputView(outputViewModel, viewManagerModel, generateViewModel);
         views.add(outputView, outputView.viewName);
 
+        TrackDetailsView trackDetailsView = new TrackDetailsView(trackDetailsViewModel, viewManagerModel, menuView);
+        views.add(trackDetailsView, trackDetailsView.viewName);
+
         MergeView mergeView = MergeUseCaseFactory.create(viewManagerModel, generateViewModel, outputViewModel,
                 outputView);
         views.add(mergeView, mergeView.viewName);
@@ -55,7 +62,11 @@ public class Main {
                 generateViewModel, outputViewModel, mergeView);
         views.add(generateView, generateView.viewName);
 
-        viewManagerModel.setActiveView(menuView.viewName);
+        GetTrackDetailsView getTrackDetailsView = GetTrackDetailsUseCaseFactory.create(viewManagerModel,
+                getTrackDetailsViewModel, trackDetailsViewModel);
+        views.add(getTrackDetailsView, getTrackDetailsView.viewName);
+
+        viewManagerModel.setActiveView(signupViewModel.getViewName());
         viewManagerModel.firePropertyChanged();
 
         application.pack();

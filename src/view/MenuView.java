@@ -2,6 +2,7 @@ package view;
 
 import interface_adapter.ViewManagerModel;
 import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.getTrackDetails.GetTrackDetailsViewModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,13 +16,17 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
     public final String viewName = "menu";
 
     private final GenerateViewModel generateViewModel;
+
+    private final GetTrackDetailsViewModel getTrackDetailsViewModel;
     private final ViewManagerModel viewManagerModel;
 
     private final JButton generate;
     private final JButton getSimilar;
     private final JButton getTrackInfo;
-    public MenuView(GenerateViewModel generateViewModel, ViewManagerModel viewManagerModel) {
+    public MenuView(GenerateViewModel generateViewModel, GetTrackDetailsViewModel getTrackDetailsViewModel,
+                    ViewManagerModel viewManagerModel) {
         this.generateViewModel = generateViewModel;
+        this.getTrackDetailsViewModel = getTrackDetailsViewModel;
         this.viewManagerModel = viewManagerModel;
 
         JLabel title = new JLabel("Menu");
@@ -50,6 +55,18 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
         JPanel getTrackInfoButton = new JPanel();
         getTrackInfo = new JButton("Get details of the song");
         getTrackInfoButton.add(getTrackInfo);
+
+        getTrackInfo.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (e.getSource().equals(getTrackInfo)) {
+                            viewManagerModel.setActiveView(getTrackDetailsViewModel.getViewName());
+                            viewManagerModel.firePropertyChanged();
+                        }
+                    }
+                }
+        );
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
