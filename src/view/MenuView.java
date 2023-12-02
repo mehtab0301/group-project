@@ -2,6 +2,7 @@ package view;
 
 import interface_adapter.ViewManagerModel;
 import interface_adapter.generate.GenerateViewModel;
+import interface_adapter.getSimilarPlaylists.GetSimilarPlaylistsViewModel;
 import interface_adapter.getTrackDetails.GetTrackDetailsViewModel;
 
 import javax.swing.*;
@@ -16,16 +17,17 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
     public final String viewName = "menu";
 
     private final GenerateViewModel generateViewModel;
-
+    private final GetSimilarPlaylistsViewModel getSimilarPlaylistsViewModel;
     private final GetTrackDetailsViewModel getTrackDetailsViewModel;
     private final ViewManagerModel viewManagerModel;
 
     private final JButton generate;
     private final JButton getSimilar;
     private final JButton getTrackInfo;
-    public MenuView(GenerateViewModel generateViewModel, GetTrackDetailsViewModel getTrackDetailsViewModel,
-                    ViewManagerModel viewManagerModel) {
+    public MenuView(GenerateViewModel generateViewModel, GetSimilarPlaylistsViewModel getSimilarPlaylistsViewModel,
+                    GetTrackDetailsViewModel getTrackDetailsViewModel, ViewManagerModel viewManagerModel) {
         this.generateViewModel = generateViewModel;
+        this.getSimilarPlaylistsViewModel = getSimilarPlaylistsViewModel;
         this.getTrackDetailsViewModel = getTrackDetailsViewModel;
         this.viewManagerModel = viewManagerModel;
 
@@ -51,6 +53,18 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
         JPanel getSimilarPlaylistsButton = new JPanel();
         getSimilar = new JButton("Get Playlists contains the song");
         getSimilarPlaylistsButton.add(getSimilar);
+
+        getSimilar.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (e.getSource().equals(getSimilar)) {
+                            viewManagerModel.setActiveView(getSimilarPlaylistsViewModel.getViewName());
+                            viewManagerModel.firePropertyChanged();
+                        }
+                    }
+                }
+        );
 
         JPanel getTrackInfoButton = new JPanel();
         getTrackInfo = new JButton("Get details of the song");
