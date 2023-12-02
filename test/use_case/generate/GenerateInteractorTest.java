@@ -25,4 +25,21 @@ public class GenerateInteractorTest {
         GenerateInputBoundary generateInteractor = new GenerateInteractor(successPresenter);
         generateInteractor.execute(generateInputData);
     }
-}
+    @Test
+    public void GeneratePlaylistTestFailGenre() throws IOException {
+        GenerateInputData generateInputData = new GenerateInputData("",
+                10, 0.1F, 0.1F, 0.1F, 0.1F, 3);
+
+        GenerateOutputBoundary successPresenter = new GenerateOutputBoundary() {
+            @Override
+            public void prepareSuccessView(GenerateOutputData generateOutputData) {
+                try {
+                    generateOutputData.getTrackList().getLength();
+                    assert false: "Expected Exception";
+                }
+                catch (ArithmeticException e){
+                    assert true: "good";
+            }
+        };
+    };
+}}
