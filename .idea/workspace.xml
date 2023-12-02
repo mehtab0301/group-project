@@ -4,8 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Added some testing Similar Playlists">
-      <change beforePath="$PROJECT_DIR$/test/use_case/generate/GenerateInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/use_case/generate/GenerateInteractorTest.java" afterDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Modify the view so only presenting information for this time generation">
+      <change afterPath="$PROJECT_DIR$/test/entity/CommonUserFactoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/entity/CommonUserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/entity/SimilarPlaylistsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/use_case/getSimilarPlaylists/getSimilarPlaylistsInteractorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/use_case/login/LoginInteractorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/use_case/signup/SignupInteractorTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/generateView/GenerateViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/loginView/LoginViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/menuView/MenuViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/mergeView/MergeViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/outputView/OutputViewTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/view/signupView/SignupViewTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Song.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Song.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/login/LoginInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/login/LoginOutputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/login/LoginOutputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SignupView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignupView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Song.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Song.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
@@ -51,7 +72,9 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
+    "git-widget-placeholder": "UpdateAll",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/group-project/src/interface_adapter",
     "node.js.detected.package.eslint": "true",
@@ -79,8 +102,15 @@
       <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getSimilarPlaylists" />
       <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getTrackDetails" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="use_case.generate" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="view" />
+      <recent name="entity" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="app" />
@@ -147,50 +177,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LoginViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.similarPlaylists.*" />
+          <option name="PATTERN" value="view.loginView.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.similarPlaylists" />
-      <option name="MAIN_CLASS_NAME" value="use_case.similarPlaylists.SimilarPlaylistsInteractorTest" />
-      <option name="METHOD_NAME" value="GetSimilarPlaylistsTest" />
+      <option name="PACKAGE_NAME" value="view.loginView" />
+      <option name="MAIN_CLASS_NAME" value="view.loginView.LoginViewTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignupInteractorTest.SignupTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpotifyApiPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.signup.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="use_case.signup" />
+      <option name="MAIN_CLASS_NAME" value="use_case.signup.SignupInteractorTest" />
+      <option name="METHOD_NAME" value="SignupTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTestFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="test in SpotifyApiPractice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="use_case.similarPlaylists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="use_case.similarPlaylists" />
-      <option name="MAIN_CLASS_NAME" value="use_case.similarPlaylists.SimilarPlaylistsInteractorTest" />
-      <option name="METHOD_NAME" value="GetSimilarPlaylistsTestFail" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="getTrackDetailsInteractorTest.GetTrackDetailsTestFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpotifyApiPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="use_case.getDetails.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="use_case.getDetails" />
-      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
-      <option name="METHOD_NAME" value="GetTrackDetailsTestFail" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -210,11 +231,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GenerateInteractorTest.GeneratePlaylistTestFailGenre" />
-        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest" />
-        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTestFail" />
-        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTest" />
-        <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestFail" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.test in SpotifyApiPractice" />
+        <item itemvalue="JUnit.LoginViewTest" />
+        <item itemvalue="JUnit.All in SpotifyApiPractice" />
+        <item itemvalue="JUnit.SignupInteractorTest.SignupTest" />
       </list>
     </recent_temporary>
   </component>
@@ -251,8 +272,7 @@
       <workItem from="1701528545661" duration="2146000" />
       <workItem from="1701538181889" duration="1537000" />
       <workItem from="1701540817875" duration="3348000" />
-      <workItem from="1701544390788" duration="516000" />
-      <workItem from="1701548589339" duration="5399000" />
+      <workItem from="1701544390788" duration="10096000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -366,23 +386,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701544158480</updated>
     </task>
-    <task id="LOCAL-00015" summary="Added some testing">
+    <task id="LOCAL-00015" summary="Modify the view so only presenting information for this time generation">
       <option name="closed" value="true" />
-      <created>1701551589486</created>
+      <created>1701545249534</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1701551589486</updated>
+      <updated>1701545249534</updated>
     </task>
-    <task id="LOCAL-00016" summary="Added some testing Similar Playlists">
-      <option name="closed" value="true" />
-      <created>1701553029337</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1701553029337</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -422,11 +434,14 @@
     <MESSAGE value="Update getSimilarPlaylists use case" />
     <MESSAGE value="Refine the getTrackDetails use case" />
     <MESSAGE value="Add some testing" />
-    <MESSAGE value="Added some testing" />
-    <MESSAGE value="Added some testing Similar Playlists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some testing Similar Playlists" />
+    <MESSAGE value="Modify the view so only presenting information for this time generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify the view so only presenting information for this time generation" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701544057902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/group_project$CommonUserTest.ic" NAME="CommonUserTest Coverage Results" MODIFIED="1701550592223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701553537648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/group_project$test_in_SpotifyApiPractice.ic" NAME="test in SpotifyApiPractice Coverage Results" MODIFIED="1701554767931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

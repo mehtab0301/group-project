@@ -32,10 +32,6 @@ public class Song {
         return artist;
     }
 
-    public int getPopularity() {
-        return popularity;
-    }
-
     public Optional<ArrayList<SimilarPlaylists>> getSimilarPlaylists() {
         return playlists;
     }
