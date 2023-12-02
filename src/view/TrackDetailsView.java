@@ -31,9 +31,6 @@ public class TrackDetailsView extends JPanel implements ActionListener, Property
         this.viewManagerModel = viewManagerModel;
         this.menuView = menuView;
 
-        JLabel title = new JLabel(TrackDetailsViewModel.TITLE_LABEL);
-        title.setAlignmentX(Component.CENTER_ALIGNMENT);
-
         back = new JButton("Back");
         back.setAlignmentX(Component.CENTER_ALIGNMENT);
         back.addActionListener(
@@ -49,7 +46,6 @@ public class TrackDetailsView extends JPanel implements ActionListener, Property
         );
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        this.add(title);
     }
 
     @Override
@@ -59,6 +55,12 @@ public class TrackDetailsView extends JPanel implements ActionListener, Property
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
+        this.removeAll();
+
+        JLabel title = new JLabel(TrackDetailsViewModel.TITLE_LABEL);
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        this.add(title);
+
         TrackDetailsState state = (TrackDetailsState) evt.getNewValue();
         List<Object> trackInfo = state.getTrackInfo();
 
