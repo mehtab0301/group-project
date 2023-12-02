@@ -31,9 +31,6 @@ public class SimilarPlaylistsView extends JPanel implements ActionListener, Prop
         this.viewManagerModel = viewManagerModel;
         this.menuView = menuView;
 
-        JLabel title = new JLabel(SimilarPlaylistsViewModel.TITLE_LABEL);
-        title.setAlignmentX(Component.CENTER_ALIGNMENT);
-
         back = new JButton("Back");
         back.setAlignmentX(Component.CENTER_ALIGNMENT);
         back.addActionListener(
@@ -49,7 +46,6 @@ public class SimilarPlaylistsView extends JPanel implements ActionListener, Prop
         );
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-        this.add(title);
     }
 
     @Override
@@ -59,6 +55,12 @@ public class SimilarPlaylistsView extends JPanel implements ActionListener, Prop
 
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
+        this.removeAll();
+
+        JLabel title = new JLabel(SimilarPlaylistsViewModel.TITLE_LABEL);
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        this.add(title);
+
         SimilarPlaylistsState state = (SimilarPlaylistsState) evt.getNewValue();
         SimilarPlaylists similarPlaylists = state.getSimilarPlaylists();
 
