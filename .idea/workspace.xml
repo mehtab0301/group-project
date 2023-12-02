@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Add some testing">
-      <change afterPath="$PROJECT_DIR$/test/use_case/getDetails/getTrackDetailsInteractorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyApiPractice.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Added some testing">
+      <change afterPath="$PROJECT_DIR$/test/use_case/similarPlaylists/SimilarPlaylistsInteractorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +86,7 @@
       <recent name="app" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestFail">
+  <component name="RunManager" selected="JUnit.SimilarPlaylistsInteractorTest">
     <configuration name="GetSimilarPlaylists" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -99,19 +95,6 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="API_calls.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="app.Main" />
-      <module name="SpotifyApiPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,32 +116,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="getTrackDetailsInteractorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimilarPlaylistsInteractorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.getDetails.*" />
+          <option name="PATTERN" value="use_case.similarPlaylists.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.getDetails" />
-      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
+      <option name="PACKAGE_NAME" value="use_case.similarPlaylists" />
+      <option name="MAIN_CLASS_NAME" value="use_case.similarPlaylists.SimilarPlaylistsInteractorTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="getTrackDetailsInteractorTest.GetTrackDetailsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.getDetails.*" />
+          <option name="PATTERN" value="use_case.similarPlaylists.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.getDetails" />
-      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
-      <option name="METHOD_NAME" value="GetTrackDetailsTest" />
+      <option name="PACKAGE_NAME" value="use_case.similarPlaylists" />
+      <option name="MAIN_CLASS_NAME" value="use_case.similarPlaylists.SimilarPlaylistsInteractorTest" />
+      <option name="METHOD_NAME" value="GetSimilarPlaylistsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTestFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpotifyApiPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.similarPlaylists.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="use_case.similarPlaylists" />
+      <option name="MAIN_CLASS_NAME" value="use_case.similarPlaylists.SimilarPlaylistsInteractorTest" />
+      <option name="METHOD_NAME" value="GetSimilarPlaylistsTestFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -211,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest" />
+        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTestFail" />
+        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTest" />
         <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestFail" />
         <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestSuccess" />
-        <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTest" />
-        <item itemvalue="JUnit.getTrackDetailsInteractorTest" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +252,7 @@
       <workItem from="1701538181889" duration="1537000" />
       <workItem from="1701540817875" duration="3348000" />
       <workItem from="1701544390788" duration="516000" />
-      <workItem from="1701548589339" duration="2976000" />
+      <workItem from="1701548589339" duration="4145000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -367,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701544158480</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added some testing">
+      <option name="closed" value="true" />
+      <created>1701551589486</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1701551589486</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,7 +414,8 @@
     <MESSAGE value="Update getSimilarPlaylists use case" />
     <MESSAGE value="Refine the getTrackDetails use case" />
     <MESSAGE value="Add some testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some testing" />
+    <MESSAGE value="Added some testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some testing" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701544057902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
