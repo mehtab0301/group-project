@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Add some testing">
+      <change afterPath="$PROJECT_DIR$/test/use_case/getDetails/getTrackDetailsInteractorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpotifyApiPractice.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,27 +48,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;UpdateAll&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/group-project/src/interface_adapter&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5597701&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/group-project/src/interface_adapter",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5597701",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="idk" />
@@ -86,7 +90,7 @@
       <recent name="app" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestFail">
     <configuration name="GetSimilarPlaylists" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -129,57 +133,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in SpotifyApiPractice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="getTrackDetailsInteractorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.getDetails.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="use_case.getDetails" />
+      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeInteractorTest.MergeTest (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="getTrackDetailsInteractorTest.GetTrackDetailsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.merge.*" />
+          <option name="PATTERN" value="use_case.getDetails.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.merge" />
-      <option name="MAIN_CLASS_NAME" value="use_case.merge.MergeInteractorTest" />
-      <option name="METHOD_NAME" value="MergeTest" />
+      <option name="PACKAGE_NAME" value="use_case.getDetails" />
+      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
+      <option name="METHOD_NAME" value="GetTrackDetailsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeInteractorTest.MergeTest (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="getTrackDetailsInteractorTest.GetTrackDetailsTestFail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.merge.*" />
+          <option name="PATTERN" value="use_case.getDetails.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.merge" />
-      <option name="MAIN_CLASS_NAME" value="use_case.merge.MergeInteractorTest" />
-      <option name="METHOD_NAME" value="MergeTest" />
+      <option name="PACKAGE_NAME" value="use_case.getDetails" />
+      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
+      <option name="METHOD_NAME" value="GetTrackDetailsTestFail" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MergeInteractorTest.MergeTest (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="getTrackDetailsInteractorTest.GetTrackDetailsTestSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.merge.*" />
+          <option name="PATTERN" value="use_case.getDetails.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.merge" />
-      <option name="MAIN_CLASS_NAME" value="use_case.merge.MergeInteractorTest" />
-      <option name="METHOD_NAME" value="MergeTest" />
+      <option name="PACKAGE_NAME" value="use_case.getDetails" />
+      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
+      <option name="METHOD_NAME" value="GetTrackDetailsTestSuccess" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestFail" />
+        <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestSuccess" />
+        <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTest" />
+        <item itemvalue="JUnit.getTrackDetailsInteractorTest" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.All in SpotifyApiPractice" />
-        <item itemvalue="JUnit.MergeInteractorTest.MergeTest (4)" />
-        <item itemvalue="JUnit.MergeInteractorTest.MergeTest (3)" />
-        <item itemvalue="JUnit.MergeInteractorTest.MergeTest (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -242,6 +253,7 @@
       <workItem from="1701538181889" duration="1537000" />
       <workItem from="1701540817875" duration="3348000" />
       <workItem from="1701544390788" duration="516000" />
+      <workItem from="1701548589339" duration="2976000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
