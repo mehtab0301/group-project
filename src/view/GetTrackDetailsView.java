@@ -43,7 +43,7 @@ public class GetTrackDetailsView extends JPanel implements ActionListener, Prope
                     public void keyTyped(KeyEvent e) {
                         GetTrackDetailsState currentState = getTrackDetailsViewModel.getState();
                         String link = songLinkField.getText() + e.getKeyChar();
-                        currentState.setSongLink(link);
+                        currentState.setSongLink(link.substring(0, link.length() - 1));
                         getTrackDetailsViewModel.setState(currentState);
                     }
 

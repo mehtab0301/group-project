@@ -8,6 +8,7 @@ import interface_adapter.output.OutputViewModel;
 import use_case.merge.MergeInputBoundary;
 import use_case.merge.MergeInteractor;
 import use_case.merge.MergeOutputBoundary;
+import view.MenuView;
 import view.MergeView;
 import view.OutputView;
 
@@ -19,10 +20,11 @@ public class MergeUseCaseFactory {
     public static MergeView create(ViewManagerModel viewManagerModel,
                                    GenerateViewModel generateViewModel,
                                    OutputViewModel outputViewModel,
-                                   OutputView outputView) {
+                                   OutputView outputView,
+                                   MenuView menuView) {
         try {
             MergeController mergeController = createUserMergeUseCase(viewManagerModel, outputViewModel, outputView);
-            return new MergeView(outputViewModel, viewManagerModel, generateViewModel, mergeController);
+            return new MergeView(outputViewModel, viewManagerModel, generateViewModel, mergeController, menuView);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "There's an error.");
         }

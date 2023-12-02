@@ -25,11 +25,15 @@ public class MergeView extends JPanel implements ActionListener, PropertyChangeL
 
     private final MergeController mergeController;
 
+    private final MenuView menuView;
+
+    public final JButton back;
     public final JButton merge;
     public final JButton generateAgain;
 
     public MergeView(OutputViewModel outputViewModel, ViewManagerModel viewManagerModel,
-                     GenerateViewModel generateViewModel, MergeController mergeController) {
+                     GenerateViewModel generateViewModel, MergeController mergeController,
+                     MenuView menuView) {
         this.outputViewModel = outputViewModel;
         outputViewModel.addPropertyChangeListener(this);
 
@@ -37,7 +41,23 @@ public class MergeView extends JPanel implements ActionListener, PropertyChangeL
         this.generateViewModel = generateViewModel;
         generateViewModel.addPropertyChangeListener(this);
 
+        this.menuView = menuView;
+
         this.mergeController = mergeController;
+
+        back = new JButton("Back");
+        back.setAlignmentX(Component.LEFT_ALIGNMENT);
+        back.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (e.getSource().equals(back)) {
+                            viewManagerModel.setActiveView(menuView.viewName);
+                            viewManagerModel.firePropertyChanged();
+                        }
+                    }
+                }
+        );
 
         merge = new JButton("Merge with previous playlist(s)");
         merge.addActionListener(
@@ -106,8 +126,10 @@ public class MergeView extends JPanel implements ActionListener, PropertyChangeL
         }
         JPanel buttons = new JPanel();
         buttons.setAlignmentX(Component.CENTER_ALIGNMENT);
+        buttons.add(back);
         buttons.add(merge);
         buttons.add(generateAgain);
+
         this.add(buttons);
     }
 }

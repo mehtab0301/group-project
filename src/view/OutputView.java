@@ -17,24 +17,37 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
 
     public final String viewName = "output";
 
-    public final JLabel title = new JLabel();
-
+    public final JButton back;
     public final JButton generateAgain;
 
     private final OutputViewModel outputViewModel;
     private final ViewManagerModel viewManagerModel;
     private final GenerateViewModel generateViewModel;
+    private final MenuView menuView;
 
     public OutputView(OutputViewModel outputViewModel, ViewManagerModel viewManagerModel,
-                      GenerateViewModel generateViewModel) {
+                      GenerateViewModel generateViewModel, MenuView menuView) {
         this.outputViewModel = outputViewModel;
         outputViewModel.addPropertyChangeListener(this);
 
         this.viewManagerModel = viewManagerModel;
         this.generateViewModel = generateViewModel;
 
-        title.setText(OutputViewModel.TITLE_LABEL);
-        title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        this.menuView = menuView;
+
+        back = new JButton("Back");
+        back.setAlignmentX(Component.LEFT_ALIGNMENT);
+        back.addActionListener(
+                new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        if (e.getSource().equals(back)) {
+                            viewManagerModel.setActiveView(menuView.viewName);
+                            viewManagerModel.firePropertyChanged();
+                        }
+                    }
+                }
+        );
 
         generateAgain = new JButton(OutputViewModel.GENERATE_ANOTHER_BUTTON_LABEL);
         generateAgain.setAlignmentX(Component.CENTER_ALIGNMENT);
@@ -60,6 +73,9 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
     @Override
     public void propertyChange(PropertyChangeEvent evt) {
         this.removeAll();
+
+        JLabel title = new JLabel(OutputViewModel.TITLE_LABEL);
+        title.setAlignmentX(Component.CENTER_ALIGNMENT);
         this.add(title);
 
         OutputViewState state = (OutputViewState) evt.getNewValue();
@@ -82,6 +98,11 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
 
             this.add(song);
         }
-        this.add(generateAgain);
+
+        JPanel buttons = new JPanel();
+        buttons.add(back);
+        buttons.add(generateAgain);
+
+        this.add(buttons);
     }
 }

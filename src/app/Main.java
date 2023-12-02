@@ -53,7 +53,7 @@ public class Main {
                 userDataAccessObject);
         views.add(signupView, signupView.viewName);
 
-        OutputView outputView = new OutputView(outputViewModel, viewManagerModel, generateViewModel);
+        OutputView outputView = new OutputView(outputViewModel, viewManagerModel, generateViewModel, menuView);
         views.add(outputView, outputView.viewName);
 
         SimilarPlaylistsView similarPlaylistsView = new SimilarPlaylistsView(similarPlaylistsViewModel,
@@ -64,7 +64,7 @@ public class Main {
         views.add(trackDetailsView, trackDetailsView.viewName);
 
         MergeView mergeView = MergeUseCaseFactory.create(viewManagerModel, generateViewModel, outputViewModel,
-                outputView);
+                outputView, menuView);
         views.add(mergeView, mergeView.viewName);
 
         GenerateView generateView = GenerateUseCaseFactory.create(viewManagerModel,
