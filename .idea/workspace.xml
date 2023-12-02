@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Added some testing">
-      <change afterPath="$PROJECT_DIR$/test/use_case/similarPlaylists/SimilarPlaylistsInteractorTest.java" afterDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Added some testing Similar Playlists">
+      <change beforePath="$PROJECT_DIR$/test/use_case/generate/GenerateInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/use_case/generate/GenerateInteractorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +31,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -86,7 +86,7 @@
       <recent name="app" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SimilarPlaylistsInteractorTest">
+  <component name="RunManager" selected="JUnit.GenerateInteractorTest.GeneratePlaylistTestFailGenre">
     <configuration name="GetSimilarPlaylists" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -112,6 +112,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GenerateInteractorTest.GeneratePlaylistTestFailGenre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SpotifyApiPractice" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.generate.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="use_case.generate" />
+      <option name="MAIN_CLASS_NAME" value="use_case.generate.GenerateInteractorTest" />
+      <option name="METHOD_NAME" value="GeneratePlaylistTestFailGenre" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -179,22 +195,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="getTrackDetailsInteractorTest.GetTrackDetailsTestSuccess" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SpotifyApiPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="use_case.getDetails.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="use_case.getDetails" />
-      <option name="MAIN_CLASS_NAME" value="use_case.getDetails.getTrackDetailsInteractorTest" />
-      <option name="METHOD_NAME" value="GetTrackDetailsTestSuccess" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Group_spotify" />
       <method v="2">
@@ -210,11 +210,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GenerateInteractorTest.GeneratePlaylistTestFailGenre" />
         <item itemvalue="JUnit.SimilarPlaylistsInteractorTest" />
         <item itemvalue="JUnit.SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTestFail" />
         <item itemvalue="JUnit.SimilarPlaylistsInteractorTest.GetSimilarPlaylistsTest" />
         <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestFail" />
-        <item itemvalue="JUnit.getTrackDetailsInteractorTest.GetTrackDetailsTestSuccess" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +252,7 @@
       <workItem from="1701538181889" duration="1537000" />
       <workItem from="1701540817875" duration="3348000" />
       <workItem from="1701544390788" duration="516000" />
-      <workItem from="1701548589339" duration="4145000" />
+      <workItem from="1701548589339" duration="5399000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -374,7 +374,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701551589486</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added some testing Similar Playlists">
+      <option name="closed" value="true" />
+      <created>1701553029337</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1701553029337</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +423,8 @@
     <MESSAGE value="Refine the getTrackDetails use case" />
     <MESSAGE value="Add some testing" />
     <MESSAGE value="Added some testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some testing" />
+    <MESSAGE value="Added some testing Similar Playlists" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some testing Similar Playlists" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701544057902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
