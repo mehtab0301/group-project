@@ -20,4 +20,6 @@ public class SimilarPlaylists {
         return similarPlaylists;
     }
 
+    public int getSimilarPlaylistsLength() { return similarPlaylists.size(); }
+
 }
