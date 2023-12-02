@@ -11,10 +11,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrackDetailsInteractor {
+public class GetTrackDetailsHelper {
 
-    static String songLink = "https://open.spotify.com/track/0QVO36SaIlLGXiGZoMG6sO";
-    public List<Object> createTrackDetails(String songLink) throws IOException {
+    // Example song link: "https://open.spotify.com/track/0QVO36SaIlLGXiGZoMG6sO"
+    public static List<Object> createTrackDetails(String songLink) throws IOException {
         ArrayList<Object> apiRequest = GetTrackDetails.apiTrackDetails(songLink);
         OkHttpClient client = (OkHttpClient) apiRequest.get(0);
         Request request = (Request) apiRequest.get(1);

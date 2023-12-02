@@ -13,7 +13,7 @@ public class OutputViewModel extends ViewModel {
 
     private OutputViewState state = new OutputViewState();
 
-    public OutputViewModel() { super("output");}
+    public OutputViewModel() { super("output"); }
 
     public void setState(OutputViewState state) { this.state = state; }
 
