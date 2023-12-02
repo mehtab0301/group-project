@@ -4,33 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Update generate use case">
-      <change afterPath="$PROJECT_DIR$/src/app/GetTrackDetailsUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsPresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/getTrackDetails/GetTrackDetailsViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/trackDetails/TrackDetailsState.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/interface_adapter/trackDetails/TrackDetailsViewModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsOutputData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/GetTrackDetailsView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/TrackDetailsView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_24_20_43_[Changes]/GenerateState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2023_11_24_20_43_[Changes]/GenerateView.class" beforeDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Update getSimilarPlaylists use case">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data_access/UserDataAccessObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_access/UserDataAccessObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/generate/GenerateViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/interface_adapter/output/OutputViewState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/generate/GenerateOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getTrackDetails/TrackDetailsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/GenerateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GenerateView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/app/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/MergeUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/MergeUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GetTrackDetailsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GetTrackDetailsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MergeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MergeView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/OutputView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/OutputView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +35,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -66,24 +48,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "UpdateAll",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/group-project/src/view",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;UpdateAll&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/group-project/src/interface_adapter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="idk" />
@@ -92,8 +74,10 @@
       <recent name="data_access" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\group-project\src\view" />
       <recent name="C:\Users\User\IdeaProjects\group-project\src\interface_adapter" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\interface_adapter\getSimilarPlaylists" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\view" />
+      <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getSimilarPlaylists" />
       <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getTrackDetails" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -232,6 +216,9 @@
       <workItem from="1701481606407" duration="399000" />
       <workItem from="1701482951429" duration="1658000" />
       <workItem from="1701485374309" duration="7153000" />
+      <workItem from="1701495315210" duration="1429000" />
+      <workItem from="1701496915624" duration="28000" />
+      <workItem from="1701528545661" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -313,7 +300,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701471719195</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update getTrackDetails use case">
+      <option name="closed" value="true" />
+      <created>1701495655259</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1701495655259</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update getSimilarPlaylists use case">
+      <option name="closed" value="true" />
+      <created>1701496150792</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1701496150792</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -349,6 +352,8 @@
     <MESSAGE value="Creating the merge button in the first view" />
     <MESSAGE value="Fixed the getArtists bug" />
     <MESSAGE value="Update generate use case" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update generate use case" />
+    <MESSAGE value="Update getTrackDetails use case" />
+    <MESSAGE value="Update getSimilarPlaylists use case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update getSimilarPlaylists use case" />
   </component>
 </project>

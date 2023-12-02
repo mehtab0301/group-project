@@ -62,14 +62,17 @@ public class TrackDetailsView extends JPanel implements ActionListener, Property
         TrackDetailsState state = (TrackDetailsState) evt.getNewValue();
         List<Object> trackInfo = state.getTrackInfo();
 
-        for (int i = 0; i < state.getNumOfInfo(); i++) {
-            JPanel eachInfo = new JPanel();
-            JLabel info = new JLabel(String.valueOf(trackInfo.get(i)));
-            eachInfo.add(info);
+        JPanel popularity = new JPanel();
+        JLabel popularityInfo = new JLabel("The popularity of this song is: " + String.valueOf(trackInfo.get(0)));
+        popularity.add(popularityInfo);
 
-            this.add(eachInfo);
-        }
+        JPanel releaseDate = new JPanel();
+        JLabel releaseDateInfo = new JLabel("The release date of this song is: " +
+                String.valueOf(trackInfo.get(1)));
+        releaseDate.add(releaseDateInfo);
 
+        this.add(popularity);
+        this.add(releaseDate);
         this.add(back);
     }
 }
