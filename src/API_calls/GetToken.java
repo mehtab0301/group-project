@@ -1,7 +1,7 @@
 package API_calls;
 
 public class GetToken {
-    private static final String token = "BQAnfXJ-T76FgB3tOugQhCIUls1eSIi76kCGsZuxoolH8gqBgzxOrqlWWlHZFi8pSoguQS3gMrOU9K4bHowMGjyi9hXbzkkiUgZ1hRcUDJxk4CRjGJzsUETT5hFYJ_nMCbSDJqBxF1TwjYuSLXjoVtNErYaSeAoZW0_qYlVB83o2VLbwI26Q-VM10fHK1ew5_iNi7bQ64xZMpCmKjpSwJIEsMBoq4jQDO8xGIel-Ut2Z-iy8USPq070XZ5Ju8D9JAIsmCAH9BZ7OtG6J5gtIITVl2t0";
+    private static final String token = "BQDqFHQyhzOqK1DyFw3oBV-6FOkvYw4-Dsl1PuHNHHEjWJ5gNSeuuJxvBy7ykJxTtqLc8PRQ1ZMaU61HMm0gGIhyCa8yCLWJP58QAhFsl8H2BIbk_j2RfvY8mk4A-tltwcMmkmoC_u3r3AVzgMq30i-qIWYLWnHQ-_6jxzBDQtWMxlBOjgoKQ1-yl5bt7EfXpq26pWAaC3mHkBMTfea_6W1zMLb7YtOvE9L5FoEp692zmUHY242vEToeCp7YsnVVvIzUQkVPbQ";
 
     public static String getToken() {
         return token;

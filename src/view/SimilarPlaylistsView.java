@@ -12,7 +12,16 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
-public class SimilarPlaylistsView extends JPanel implements ActionListener, PropertyChangeListener {
+import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
+import java.awt.*;
+import java.beans.PropertyChangeEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+
+public class SimilarPlaylistsView extends JPanel implements ActionListener, PropertyChangeListener, HyperlinkListener {
 
     public final String viewName = "similarPlaylists";
 
@@ -22,6 +31,9 @@ public class SimilarPlaylistsView extends JPanel implements ActionListener, Prop
     private final MenuView menuView;
 
     public final JButton back;
+
+    // Added JEditorPane for clickable links
+    private final JEditorPane editorPane;
 
     public SimilarPlaylistsView(SimilarPlaylistsViewModel similarPlaylistsViewModel,
                                 ViewManagerModel viewManagerModel,
@@ -45,6 +57,11 @@ public class SimilarPlaylistsView extends JPanel implements ActionListener, Prop
                 }
         );
 
+        editorPane = new JEditorPane();
+        editorPane.setContentType("text/html");
+        editorPane.setEditable(false); // Make it read-only
+        editorPane.addHyperlinkListener(this);
+
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
     }
 
@@ -64,14 +81,39 @@ public class SimilarPlaylistsView extends JPanel implements ActionListener, Prop
         SimilarPlaylistsState state = (SimilarPlaylistsState) evt.getNewValue();
         SimilarPlaylists similarPlaylists = state.getSimilarPlaylists();
 
+        // Build HTML content with clickable links
+        StringBuilder htmlContent = new StringBuilder("<html>");
         for (int i = 0; i < similarPlaylists.getSimilarPlaylistsLength(); i++) {
-            JPanel similarPlaylist = new JPanel();
-            JLabel playlistLink = new JLabel(similarPlaylists.getSimilarPlaylists().get(i));
-            similarPlaylist.add(playlistLink);
-
-            this.add(similarPlaylist);
+            htmlContent.append("<a href='").append(similarPlaylists.getSimilarPlaylists().get(i)).append("'>")
+                    .append(similarPlaylists.getSimilarPlaylists().get(i)).append("</a><br>");
         }
 
+        // Set HTML content to the JEditorPane
+        editorPane.setText(htmlContent.toString());
+
+        // Add the editorPane to the panel
+        this.add(editorPane);
+
         this.add(back);
+    }
+
+    @Override
+    public void hyperlinkUpdate(HyperlinkEvent e) {
+        if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+            // Handle the hyperlink activation here
+            String url = e.getDescription();
+            System.out.println("Link clicked: " + url);
+
+            // Open the URL in the default web browser
+            try {
+                if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                    Desktop.getDesktop().browse(new URI(url));
+                } else {
+                    System.out.println("Desktop browsing not supported on this platform.");
+                }
+            } catch (IOException | URISyntaxException ex) {
+                ex.printStackTrace();
+            }
+        }
     }
 }
