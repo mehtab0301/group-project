@@ -20,7 +20,7 @@ public class GetTrackDetailsUseCaseFactory {
         return new GetTrackDetailsView(getTrackDetailsController, getTrackDetailsViewModel);
     }
 
-    private static GetTrackDetailsController createUserGetTrackDetailsUseCase(
+    static GetTrackDetailsController createUserGetTrackDetailsUseCase(
             ViewManagerModel viewManagerModel, TrackDetailsViewModel trackDetailsViewModel
     ) {
         GetTrackDetailsOutputBoundary getTrackDetailsOutputBoundary = new GetTrackDetailsPresenter(viewManagerModel,

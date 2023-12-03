@@ -19,9 +19,9 @@ public class GetSimilarPlaylistsView extends JPanel implements ActionListener, P
 
     private final GetSimilarPlaylistsViewModel getSimilarPlaylistsViewModel;
 
-    private final JTextField songNameField = new JTextField(15);
+    public final JTextField songNameField = new JTextField(15);
 
-    private final JButton generate;
+    public final JButton generate;
 
     private final GetSimilarPlaylistsController getSimilarPlaylistsController;
 
