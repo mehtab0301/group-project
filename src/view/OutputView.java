@@ -7,18 +7,25 @@ import interface_adapter.output.OutputViewModel;
 import interface_adapter.output.OutputViewState;
 
 import javax.swing.*;
+import javax.swing.event.HyperlinkEvent;
+import javax.swing.event.HyperlinkListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.net.URI;
+import java.io.IOException;
+import java.net.URISyntaxException;
 
-public class OutputView extends JPanel implements ActionListener, PropertyChangeListener {
+public class OutputView extends JPanel implements ActionListener, PropertyChangeListener, HyperlinkListener {
 
-    public final String viewName = "output";
+    public final String viewName = "Playlist";
 
     public final JButton back;
     public final JButton generateAgain;
+
+    private final JEditorPane editorPane;
 
     private final OutputViewModel outputViewModel;
     private final ViewManagerModel viewManagerModel;
@@ -49,6 +56,8 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
                 }
         );
 
+
+
         generateAgain = new JButton(OutputViewModel.GENERATE_ANOTHER_BUTTON_LABEL);
         generateAgain.setAlignmentX(Component.CENTER_ALIGNMENT);
         generateAgain.addActionListener(
@@ -62,6 +71,11 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
                     }
                 }
         );
+
+        editorPane = new JEditorPane();
+        editorPane.setContentType("text/html");
+        editorPane.setEditable(false); // Make it read-only
+        editorPane.addHyperlinkListener(this);
 
         this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
     }
@@ -104,5 +118,25 @@ public class OutputView extends JPanel implements ActionListener, PropertyChange
         buttons.add(generateAgain);
 
         this.add(buttons);
+    }
+
+    public void hyperlinkUpdate(HyperlinkEvent e) {
+        if (e.getEventType() == HyperlinkEvent.EventType.ACTIVATED) {
+            // Handle the hyperlink activation here
+            String url = e.getDescription();
+            System.out.println("Link clicked: " + url);
+
+            // Open the URL in the default web browser
+            try {
+                if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                    Desktop.getDesktop().browse(new URI(url));
+                } else {
+                    System.out.println("Desktop browsing not supported on this platform.");
+                }
+            } catch (IOException | URISyntaxException ex) {
+                ex.printStackTrace();
+            }
+        }
+
     }
 }
