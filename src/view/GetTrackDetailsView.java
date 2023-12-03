@@ -18,9 +18,9 @@ public class GetTrackDetailsView extends JPanel implements ActionListener, Prope
     public final String viewName = "getTrackDetails";
 
     private final GetTrackDetailsViewModel getTrackDetailsViewModel;
-    private final JTextField songLinkField = new JTextField(15);
+    public final JTextField songLinkField = new JTextField(15);
 
-    private final JButton generate;
+    public final JButton generate;
 
     private final GetTrackDetailsController getTrackDetailsController;
 
