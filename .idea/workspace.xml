@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Adding tests">
-      <change afterPath="$PROJECT_DIR$/test/app/GenerateUseCaseFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app/GetSimilarPlaylistsUseCaseFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app/GetTrackDetailsUseCaseFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app/LoginUseCaseFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app/MainTestHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/app/MergeUseCaseFactoryTest.java" afterDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Added some testing Similar Playlists">
+      <change afterPath="$PROJECT_DIR$/test/use_case/login/loginInteractorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/GenerateUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/GetSimilarPlaylistsUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/GetSimilarPlaylistsUseCaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/GetTrackDetailsUseCaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/GetTrackDetailsUseCaseFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +106,7 @@
       <recent name="app" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.test in SpotifyApiPractice">
+  <component name="RunManager" selected="JUnit.loginInteractorTest.testPrepareFailUserView">
     <configuration name="GetSimilarPlaylists" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-20" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -175,33 +167,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ViewManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="loginInteractorTest.testPrepareFailUserView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="view.viewManager.*" />
+          <option name="PATTERN" value="use_case.login.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="view.viewManager" />
-      <option name="MAIN_CLASS_NAME" value="view.viewManager.ViewManagerTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="use_case.login" />
+      <option name="MAIN_CLASS_NAME" value="use_case.login.loginInteractorTest" />
+      <option name="METHOD_NAME" value="testPrepareFailUserView" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app in SpotifyApiPractice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="loginInteractorTest.testPrepareFailView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/test/app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="use_case.login" />
+      <option name="MAIN_CLASS_NAME" value="use_case.login.loginInteractorTest" />
+      <option name="METHOD_NAME" value="testPrepareFailView" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test in SpotifyApiPractice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="loginInteractorTest.testPrepareSuccessView" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
-      <option name="TEST_OBJECT" value="directory" />
-      <dir value="$PROJECT_DIR$/test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="use_case.login.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="use_case.login" />
+      <option name="MAIN_CLASS_NAME" value="use_case.login.loginInteractorTest" />
+      <option name="METHOD_NAME" value="testPrepareSuccessView" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -221,11 +230,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.test in SpotifyApiPractice" />
-        <item itemvalue="JUnit.app in SpotifyApiPractice" />
-        <item itemvalue="JUnit.OutputViewTest" />
-        <item itemvalue="JUnit.ViewManagerTest" />
-        <item itemvalue="JUnit.GenerateStateTest.gettersAndSetters" />
+        <item itemvalue="JUnit.loginInteractorTest.testPrepareFailUserView" />
+        <item itemvalue="JUnit.loginInteractorTest.testPrepareFailView" />
+        <item itemvalue="JUnit.loginInteractorTest.testPrepareSuccessView" />
+        <item itemvalue="JUnit.GenerateInteractorTest.GeneratePlaylistTestFailGenre" />
+        <item itemvalue="JUnit.SimilarPlaylistsInteractorTest" />
       </list>
     </recent_temporary>
   </component>
@@ -262,7 +271,8 @@
       <workItem from="1701528545661" duration="2146000" />
       <workItem from="1701538181889" duration="1537000" />
       <workItem from="1701540817875" duration="3348000" />
-      <workItem from="1701544390788" duration="10096000" />
+      <workItem from="1701544390788" duration="516000" />
+      <workItem from="1701548589339" duration="17223000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -392,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701564275559</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Added some testing Similar Playlists">
+      <option name="closed" value="true" />
+      <created>1701554099888</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1701554099888</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
