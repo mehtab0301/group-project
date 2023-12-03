@@ -21,12 +21,18 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,27 +52,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/group-project/src/interface_adapter",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5597701",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;UpdateAll&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/group-project/src/interface_adapter&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5597701&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="idk" />
@@ -81,8 +89,18 @@
       <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getSimilarPlaylists" />
       <recent name="C:\Users\User\IdeaProjects\group-project\src\use_case\getTrackDetails" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="use_case.generate" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="app" />
+      <recent name="interface_adapter.trackDetails" />
+      <recent name="interface_adapter.signup" />
+      <recent name="interface_adapter.login" />
+      <recent name="interface_adapter.merge" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="app" />
@@ -118,32 +136,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenerateInteractorTest.GeneratePlaylistTestFailGenre" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GenerateStateTest.gettersAndSetters" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.generate.*" />
+          <option name="PATTERN" value="interface_adapter.generate.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.generate" />
-      <option name="MAIN_CLASS_NAME" value="use_case.generate.GenerateInteractorTest" />
-      <option name="METHOD_NAME" value="GeneratePlaylistTestFailGenre" />
+      <option name="PACKAGE_NAME" value="interface_adapter.generate" />
+      <option name="MAIN_CLASS_NAME" value="interface_adapter.generate.GenerateStateTest" />
+      <option name="METHOD_NAME" value="gettersAndSetters" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimilarPlaylistsInteractorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OutputViewTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="SpotifyApiPractice" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="use_case.similarPlaylists.*" />
+          <option name="PATTERN" value="view.outputView.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="use_case.similarPlaylists" />
-      <option name="MAIN_CLASS_NAME" value="use_case.similarPlaylists.SimilarPlaylistsInteractorTest" />
+      <option name="PACKAGE_NAME" value="view.outputView" />
+      <option name="MAIN_CLASS_NAME" value="view.outputView.OutputViewTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -368,21 +386,21 @@
       <option name="project" value="LOCAL" />
       <updated>1701544158480</updated>
     </task>
-    <task id="LOCAL-00015" summary="Added some testing">
+    <task id="LOCAL-00015" summary="Modify the view so only presenting information for this time generation">
       <option name="closed" value="true" />
-      <created>1701551589486</created>
+      <created>1701545249534</created>
       <option name="number" value="00015" />
       <option name="presentableId" value="LOCAL-00015" />
       <option name="project" value="LOCAL" />
-      <updated>1701551589486</updated>
+      <updated>1701545249534</updated>
     </task>
-    <task id="LOCAL-00016" summary="Added some testing Similar Playlists">
+    <task id="LOCAL-00016" summary="Adding tests">
       <option name="closed" value="true" />
-      <created>1701553029337</created>
+      <created>1701564275559</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1701553029337</updated>
+      <updated>1701564275559</updated>
     </task>
     <task id="LOCAL-00017" summary="Added some testing Similar Playlists">
       <option name="closed" value="true" />
@@ -432,11 +450,15 @@
     <MESSAGE value="Update getSimilarPlaylists use case" />
     <MESSAGE value="Refine the getTrackDetails use case" />
     <MESSAGE value="Add some testing" />
-    <MESSAGE value="Added some testing" />
-    <MESSAGE value="Added some testing Similar Playlists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some testing Similar Playlists" />
+    <MESSAGE value="Modify the view so only presenting information for this time generation" />
+    <MESSAGE value="Adding tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding tests" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701544057902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/group_project$CommonUserTest.ic" NAME="CommonUserTest Coverage Results" MODIFIED="1701550592223" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>entity.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701553537648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/group_project$test_in_SpotifyApiPractice.ic" NAME="test in SpotifyApiPractice Coverage Results" MODIFIED="1701565793504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
