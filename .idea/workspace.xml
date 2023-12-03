@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Creating the merge button in the first view">
-      <change afterPath="$PROJECT_DIR$/src/app/SimilarPlaylistUseCaseFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimPlaylistInteractor.java" afterDir="false" />
+    <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Finished the implementation of the similar playlists use case">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/CreateSimPlaylistsInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/CreateSimPlaylistsInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/SimInputData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpotifyApiPractice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +52,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;SylviaDuan&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -173,6 +173,13 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-20.0.2-corretto-20.0.2.1-1571ab7be1d6-90daa260" />
+      </set>
+    </attachedChunks>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -195,6 +202,12 @@
       <workItem from="1700773846534" duration="816000" />
       <workItem from="1700839760360" duration="15000" />
       <workItem from="1700867902242" duration="4716000" />
+      <workItem from="1701368394543" duration="686000" />
+      <workItem from="1701579352616" duration="21000" />
+      <workItem from="1701579421529" duration="24000" />
+      <workItem from="1701579479166" duration="22000" />
+      <workItem from="1701579545943" duration="18000" />
+      <workItem from="1701579656570" duration="156000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />
@@ -260,7 +273,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700769150752</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Finished the implementation of the similar playlists use case">
+      <option name="closed" value="true" />
+      <created>1701119076721</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1701119076721</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -294,6 +315,7 @@
     <MESSAGE value="Updated the entities, created the data storage objects and did the mergePlaylists interactor." />
     <MESSAGE value="Created the PlaylistInteractor which recieves the API calls and puts together the information to relay back to the view and data storage." />
     <MESSAGE value="Creating the merge button in the first view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating the merge button in the first view" />
+    <MESSAGE value="Finished the implementation of the similar playlists use case" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished the implementation of the similar playlists use case" />
   </component>
 </project>
