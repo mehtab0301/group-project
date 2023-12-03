@@ -12,6 +12,7 @@ public class Playlist {
 
     public Playlist(ArrayList<Song> songs) {
         this.songs = songs;
+
     }
 
     public ArrayList<Song> getSongs (){
