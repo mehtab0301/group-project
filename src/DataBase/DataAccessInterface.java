@@ -1,10 +1,11 @@
 package DataBase;
-import API_calls.GetTrackDetails;
 import entity.Playlist;
 import entity.Song;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
+import use_case.getTrackDetails.GetTrackDetailsHelper;
+
 import java.io.*;
 import java.util.*;
 
@@ -18,7 +19,7 @@ public class DataAccessInterface {
         }
         else
             joe.put(Username, jar);
-        PrintWriter pw = new PrintWriter("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/DataBase.json");
+        PrintWriter pw = new PrintWriter("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/PlaylistDataBase.json");
         pw.write(joe.toJSONString());
         pw.flush();
         pw.close();
@@ -37,7 +38,7 @@ public class DataAccessInterface {
             jar.add(song.getLink());
         userJar.add(jar);
         joe.put(Username, userJar);
-        PrintWriter pw = new PrintWriter("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/DataBase.json");
+        PrintWriter pw = new PrintWriter("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/PlaylistDataBase.json");
         pw.write(joe.toJSONString());
         pw.flush();
         pw.close();
@@ -48,9 +49,9 @@ public class DataAccessInterface {
         ArrayList<Song> songs = new ArrayList<>();
         for (Object link : userPlaylist) {
             String stringLink = ((String) link);
-            GetTrackDetails apiCaller = new GetTrackDetails(stringLink);
-            ArrayList<Object> trackInfo = apiCaller.getTrackInfo();
-            Song song = new Song((String) trackInfo.get(0),(ArrayList<String>) trackInfo.get(1), (int) trackInfo.get(2), (String) trackInfo.get(4));
+            GetTrackDetailsHelper helper = new GetTrackDetailsHelper();
+            List<Object> trackInfo = helper.createTrackDetails(stringLink);
+            Song song = new Song((String) trackInfo.get(0),(ArrayList<String>) trackInfo.get(1), (int) trackInfo.get(2), (String) trackInfo.get(4), stringLink, null);
             songs.add(song);
             }
 
@@ -75,7 +76,7 @@ public class DataAccessInterface {
         return userJar.size();
     }
     private static JSONObject getFileData() throws IOException, ParseException {
-        Object obj = new JSONParser().parse(new FileReader("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/DataBase.json"));
+        Object obj = new JSONParser().parse(new FileReader("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/PlaylistDataBase.json"));
         return (JSONObject) obj;
     }
 }
