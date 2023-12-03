@@ -20,7 +20,7 @@ public class GetSimilarPlaylistsUseCaseFactory {
         return new GetSimilarPlaylistsView(getSimilarPlaylistsController, getSimilarPlaylistsViewModel);
     }
 
-    private static GetSimilarPlaylistsController createUserGetSimilarPlaylistsUseCase(
+    static GetSimilarPlaylistsController createUserGetSimilarPlaylistsUseCase(
             ViewManagerModel viewManagerModel, SimilarPlaylistsViewModel similarPlaylistsViewModel
     ) {
         GetSimilarPlaylistsOutputBoundary getSimilarPlaylistsOutputBoundary = new GetSimilarPlaylistsPresenter(
