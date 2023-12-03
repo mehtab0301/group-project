@@ -5,9 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Testing for Signup">
+      <change afterPath="$PROJECT_DIR$/src/DataBase/LoginInfo.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DataBase/UserPasswordDataAccessInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/SimilarPlaylistsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SimilarPlaylistsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/DataAccessInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DataBase/DataBase.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataBase/PlaylistDataBase.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylistInputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/MergePlaylists/MergePlaylsitOutputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsInputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsInteractor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SimilarPlaylists/SimilarPlaylistsOutputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SongInfo/SongInfoInputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SongInfo/SongInfoInteractor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/SongInfo/SongInfoOutputData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/GetSimilarPlaylistsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getSimilarPlaylists/GetSimilarPlaylistsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/use_case/getTrackDetails/GetTrackDetailsHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/API_calls/GetTrackDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/API_calls/GetTrackDetails.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBase/DataAccessInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DataBase/DataAccessInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DataBase/DataBase.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data_access/PlaylistAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data_access/PlaylistHistoryAccess.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data_access/PlaylistHistoryAccess.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data_access/SongDataAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/entity/Playlist.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/use_case/CreatePlaylist/CreatePlaylistInteractor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/use_case/login/LoginInteractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/use_case/login/LoginInteractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/GenerateView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/GenerateView$7.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -461,6 +490,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Testing for Signup" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701544057902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/group_project$All_in_SpotifyApiPractice.ic" NAME="All in SpotifyApiPractice Coverage Results" MODIFIED="1701543575832" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
