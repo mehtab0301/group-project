@@ -21,9 +21,9 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
     private final GetTrackDetailsViewModel getTrackDetailsViewModel;
     private final ViewManagerModel viewManagerModel;
 
-    private final JButton generate;
-    private final JButton getSimilar;
-    private final JButton getTrackInfo;
+    public final JButton generate;
+    public final JButton getSimilar;
+    public final JButton getTrackInfo;
     public MenuView(GenerateViewModel generateViewModel, GetSimilarPlaylistsViewModel getSimilarPlaylistsViewModel,
                     GetTrackDetailsViewModel getTrackDetailsViewModel, ViewManagerModel viewManagerModel) {
         this.generateViewModel = generateViewModel;

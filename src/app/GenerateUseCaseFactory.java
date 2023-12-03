@@ -30,9 +30,9 @@ public class GenerateUseCaseFactory {
         return null;
     }
 
-    private static GenerateController createUserGenerateUseCase(ViewManagerModel viewManagerModel,
-                                                                OutputViewModel outputViewModel,
-                                                                MergeView mergeView)
+    static GenerateController createUserGenerateUseCase(ViewManagerModel viewManagerModel,
+                                                        OutputViewModel outputViewModel,
+                                                        MergeView mergeView)
             throws IOException {
 
         GenerateOutputBoundary generateOutputBoundary = new GeneratePresenter(viewManagerModel, outputViewModel,
