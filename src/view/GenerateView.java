@@ -7,6 +7,7 @@ import interface_adapter.generate.GenerateViewModel;
 import javax.swing.*;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+import javax.swing.event.HyperlinkEvent;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -332,4 +333,6 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
     @Override
     public void stateChanged(ChangeEvent e) {
     }
+
+
 }
