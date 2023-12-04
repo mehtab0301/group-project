@@ -22,7 +22,7 @@ public class GetSimilarPlaylists {
 
     // Once again, these values (except the token) need to be connected to the user input. The below function returns
     public static ArrayList<Object> getPlaylistApi(String songName) throws IOException {
-        String api_call = "https://api.spotify.com/v1/search?q=remaster%2520" + URLEncoder.encode("track:" +
+        String api_call = "https://api.spotify.com/v1/search?q=remaster%2520" + URLEncoder.encode("tracks:" +
                 songName, StandardCharsets.UTF_8) + "&type=playlist&limit=" + playlistStringNum +"&offset=0";
         // the above gets a search call to the spotify API
 

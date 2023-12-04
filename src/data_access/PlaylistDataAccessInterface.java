@@ -1,25 +1,20 @@
-package DataBase;
+package data_access;
 import entity.Playlist;
 import entity.Song;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
 import use_case.getTrackDetails.GetTrackDetailsHelper;
-
 import java.io.*;
 import java.util.*;
 
 
-public class DataAccessInterface {
+public class PlaylistDataAccessInterface {
     public void addUser(String Username) throws IOException, ParseException {
         JSONObject joe = getFileData();
         JSONArray jar = new JSONArray();
-        if(checkUserExists(joe, Username)){
-            System.out.println("L");
-        }
-        else
-            joe.put(Username, jar);
-        PrintWriter pw = new PrintWriter("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/PlaylistDataBase.json");
+        joe.put(Username, jar);
+        PrintWriter pw = new PrintWriter("DataBase/PlaylistDataBase.json");
         pw.write(joe.toJSONString());
         pw.flush();
         pw.close();
@@ -38,7 +33,7 @@ public class DataAccessInterface {
             jar.add(song.getLink());
         userJar.add(jar);
         joe.put(Username, userJar);
-        PrintWriter pw = new PrintWriter("/Users/derekdsouza/Documents/Intellij projects/GroupProject/src/DataBase/PlaylistDataBase.json");
+        PrintWriter pw = new PrintWriter("DataBase/PlaylistDataBase.json");
         pw.write(joe.toJSONString());
         pw.flush();
         pw.close();

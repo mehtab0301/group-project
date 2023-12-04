@@ -4,7 +4,7 @@ import entity.Playlist;
 
 import java.util.ArrayList;
 
-public class PlaylistHistoryAccess {
+public class PlaylistHistoryAccess extends PlaylistDataAccessInterface {
 
     private static ArrayList<Playlist> generatedPlaylists = new ArrayList<>();
 

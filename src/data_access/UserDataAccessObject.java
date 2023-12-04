@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserDataAccessObject implements SignupUserDataAccessInterface, LoginUserDataAccessInterface {
+public class UserDataAccessObject extends UserDataAccessInterface implements SignupUserDataAccessInterface, LoginUserDataAccessInterface {
     private final Map<String, User> accounts = new HashMap<>();
 
     private UserFactory userFactory;
