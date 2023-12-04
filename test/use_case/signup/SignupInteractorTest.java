@@ -12,7 +12,7 @@ import java.io.IOException;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class SignupInteractorTest {
+public class signUpInteractorTest {
     @Test
     public void testPrepareSuccessfulSignupView() throws IOException {
         // Arrange
