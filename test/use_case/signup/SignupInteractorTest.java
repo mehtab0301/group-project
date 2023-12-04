@@ -4,13 +4,15 @@ import data_access.UserDataAccessObject;
 import entity.CommonUserFactory;
 import entity.User;
 import org.junit.jupiter.api.Test;
+import use_case.login.*;
+import use_case.signup.*;
 
 import java.io.IOException;
 
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-public class SignupInteractorTest {
+public class signUpInteractorTest {
     @Test
     public void testPrepareSuccessfulSignupView() throws IOException {
         // Arrange
