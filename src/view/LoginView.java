@@ -35,6 +35,8 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
 
         JLabel title = new JLabel(LoginViewModel.TITLE_LABLE);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        title.setForeground(new Color(213, 249,121));
+        title.setFont(new Font("Poppins", Font.BOLD, 15));
         this.setBackground(new Color(22,23,46));
 
         JLabel usernameLabel = new JLabel(SignupViewModel.USERNAME_LABEL);
