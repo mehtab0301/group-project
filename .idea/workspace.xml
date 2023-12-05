@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cab78199-2601-497a-a4db-cda67d0735a3" name="Changes" comment="Testing for Signup">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_24_23,_1_50 PM_[Changes]/GenerateState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_24_23,_1_50 PM_[Changes]/GenerateView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_24_23,_1_50 PM_[Changes]/Playlist.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_24_23,_1_50 PM_[Changes]/PlaylistsHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_24_23,_1_50 PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Rebasing_at_11_24_23__1_50PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/GenerateState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/GenerateView.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/GetSimilarPlaylists.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/GetTrackDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/Song.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/SpotifyApiDataAccessObject.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23,_3_22 PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_23_23__3_22PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/API_calls/GetToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/API_calls/GetToken.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GenerateView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GenerateView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GetSimilarPlaylistsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GetSimilarPlaylistsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/GetTrackDetailsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/GetTrackDetailsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/MenuView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/MenuView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SignupView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SignupView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/view/SimilarPlaylistsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/SimilarPlaylistsView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/view/LoginView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/view/LoginView.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/use_case/signUp/signUpInteractorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/use_case/signUp/signUpInteractorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -263,6 +254,8 @@
       <workItem from="1701548589339" duration="20771000" />
       <workItem from="1701615239136" duration="4425000" />
       <workItem from="1701659259330" duration="1414000" />
+      <workItem from="1701800465935" duration="256000" />
+      <workItem from="1701800733043" duration="2161000" />
     </task>
     <task id="LOCAL-00001" summary="Updated the entities">
       <option name="closed" value="true" />

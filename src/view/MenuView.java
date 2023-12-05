@@ -11,6 +11,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.awt.Color;
+import java.awt.Font;
 
 public class MenuView extends JPanel implements ActionListener, PropertyChangeListener {
 
@@ -33,9 +35,15 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
 
         JLabel title = new JLabel("Menu");
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        this.setBackground(new Color(22,23,46));
 
         JPanel generateButton = new JPanel();
         generate = new JButton("Generate Playlist");
+        generate.setBackground(new Color(22,23,46));
+        generate.setForeground(new Color(22,23,46));
+        generate.setFont(new Font("Poppins", Font.BOLD, 15));
+        generateButton.setBackground(new Color(22,23,46));
+        generateButton.setFont(new Font("Poppins", Font.BOLD, 17));
         generateButton.add(generate);
 
         generate.addActionListener(
@@ -52,6 +60,11 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
 
         JPanel getSimilarPlaylistsButton = new JPanel();
         getSimilar = new JButton("Get Playlists contains the song");
+        getSimilar.setForeground(new Color(22,23,46));
+        getSimilar.setBackground(new Color(22,23,46));
+        getSimilar.setFont(new Font("Poppins", Font.BOLD, 15));
+        getSimilarPlaylistsButton.setBackground(new Color(22,23,46));
+        getSimilarPlaylistsButton.setFont(new Font("Poppins", Font.BOLD, 17));
         getSimilarPlaylistsButton.add(getSimilar);
 
         getSimilar.addActionListener(
@@ -68,6 +81,10 @@ public class MenuView extends JPanel implements ActionListener, PropertyChangeLi
 
         JPanel getTrackInfoButton = new JPanel();
         getTrackInfo = new JButton("Get details of the song");
+        getTrackInfo.setBackground(new Color(22,23,46));
+        getTrackInfo.setFont(new Font("Poppins", Font.BOLD, 15));
+        getTrackInfoButton.setFont(new Font("Poppins", Font.BOLD, 17));
+        getTrackInfoButton.setBackground(new Color(22,23,46));
         getTrackInfoButton.add(getTrackInfo);
 
         getTrackInfo.addActionListener(

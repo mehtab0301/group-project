@@ -13,6 +13,8 @@ import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
+import java.awt.Color;
+import java.awt.Font;
 
 public class GetSimilarPlaylistsView extends JPanel implements ActionListener, PropertyChangeListener {
     public final String viewName = "getSimilarPlaylists";
@@ -26,16 +28,26 @@ public class GetSimilarPlaylistsView extends JPanel implements ActionListener, P
     private final GetSimilarPlaylistsController getSimilarPlaylistsController;
 
     public GetSimilarPlaylistsView(GetSimilarPlaylistsController getSimilarPlaylistsController,
-                                   GetSimilarPlaylistsViewModel getSimilarPlaylistsViewModel) {
-        this.getSimilarPlaylistsController = getSimilarPlaylistsController;
+                                   GetSimilarPlaylistsViewModel getSimilarPlaylistsViewModel) {this.getSimilarPlaylistsController = getSimilarPlaylistsController;
         this.getSimilarPlaylistsViewModel = getSimilarPlaylistsViewModel;
-        getSimilarPlaylistsViewModel.addPropertyChangeListener(this);
+        this.
+                getSimilarPlaylistsViewModel.addPropertyChangeListener(this);
+        this.setBackground(new Color(22,23,46));
 
         JLabel title = new JLabel(GetSimilarPlaylistsViewModel.TITLE_LABEL);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        title.setBackground(new Color(22,23,46));
+        title.setForeground(new Color(169, 245,180));
 
-        LabelTextPanel songName = new LabelTextPanel(new JLabel(GetSimilarPlaylistsViewModel.SONGNAME_LABEL),
+        JLabel songLabel = new JLabel(GetSimilarPlaylistsViewModel.SONGNAME_LABEL);
+        songLabel.setBackground(new Color(22,23,46));
+        songLabel.setForeground(new Color(213, 249,121));
+        songLabel.setFont(new Font("Poppins", Font.BOLD, 15));
+
+        LabelTextPanel songName = new LabelTextPanel(songLabel,
                 songNameField);
+        songName.setBackground(new Color(22,23,46));
+        songName.setForeground(new Color(213, 249,121));
         songName.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         songNameField.addKeyListener(
@@ -61,7 +73,9 @@ public class GetSimilarPlaylistsView extends JPanel implements ActionListener, P
         );
 
         JPanel buttons = new JPanel();
+        buttons.setBackground(new Color(22,23,46));
         generate = new JButton(GetSimilarPlaylistsViewModel.GENERATE_BUTTON_LABEL);
+        generate.setBackground(new Color(22,23,46));
         buttons.add(generate);
 
         generate.addActionListener(

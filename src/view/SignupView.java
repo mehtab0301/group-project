@@ -12,6 +12,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.awt.Color;
+import java.awt.Font;
 
 public class SignupView extends JPanel implements ActionListener, PropertyChangeListener {
     public final String viewName = "sign up";
@@ -25,23 +27,51 @@ public class SignupView extends JPanel implements ActionListener, PropertyChange
 
     public SignupView(SignupController controller, SignupViewModel signupViewModel) {
 
+
+
         this.signupController = controller;
         this.signupViewModel = signupViewModel;
         signupViewModel.addPropertyChangeListener(this);
 
+        this.setBackground(new Color(22,23,46));
+
         JLabel title = new JLabel(SignupViewModel.TITLE_LABEL);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
+        title.setForeground(new Color(213, 249,121));
+        title.setFont(new Font("Poppins", Font.BOLD, 17));
+
+        JLabel usernameLabel = new JLabel(SignupViewModel.USERNAME_LABEL);
+        usernameLabel.setForeground(new Color(169, 245,180));
+        usernameLabel.setFont(new Font("Poppins", Font.BOLD, 15));
 
         LabelTextPanel usernameInfo = new LabelTextPanel(
-                new JLabel(SignupViewModel.USERNAME_LABEL), usernameInputField);
-        LabelTextPanel passwordInfo = new LabelTextPanel(
-                new JLabel(SignupViewModel.PASSWORD_LABEL), passwordInputField);
-        LabelTextPanel repeatPasswordInfo = new LabelTextPanel(
-                new JLabel(SignupViewModel.REPEAT_PASSWORD_LABEL), repeatPasswordInputField);
+                usernameLabel, usernameInputField);
+        usernameInfo.setBackground(new Color(22,23,46));
+        usernameInfo.setForeground(new Color(169, 245,180));
+
+        JLabel passwordLabel = new JLabel(SignupViewModel.PASSWORD_LABEL);
+        passwordLabel.setForeground(new Color(213, 249,121));
+        passwordLabel.setFont(new Font("Poppins", Font.BOLD, 15));
+
+        LabelTextPanel passwordInfo = new LabelTextPanel(passwordLabel, passwordInputField);
+        passwordInfo.setForeground(new Color(169, 245,180));
+        passwordInfo.setBackground(new Color(22,23,46));
+
+        JLabel passrepLabel = new JLabel(SignupViewModel.REPEAT_PASSWORD_LABEL);
+        passrepLabel.setForeground(new Color(169, 245,180));
+        passrepLabel.setFont(new Font("Poppins", Font.BOLD, 15));
+
+
+        LabelTextPanel repeatPasswordInfo = new LabelTextPanel(passrepLabel, repeatPasswordInputField);
+        repeatPasswordInfo.setBackground(new Color(22,23,46));
+        repeatPasswordInfo.setForeground(new Color(169, 245,180));
 
         JPanel buttons = new JPanel();
+        buttons.setBackground(new Color(22,23,46));
+        buttons.setForeground(new Color(169, 245,180));
         signUp = new JButton(SignupViewModel.SIGNUP_BUTTON_LABEL);
         buttons.add(signUp);
+
 
         signUp.addActionListener(
                 new ActionListener() {
