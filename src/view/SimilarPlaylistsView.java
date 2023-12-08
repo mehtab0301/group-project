@@ -20,6 +20,8 @@ import java.beans.PropertyChangeEvent;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.awt.Color;
+import java.awt.Font;
 
 public class SimilarPlaylistsView extends JPanel implements ActionListener, PropertyChangeListener, HyperlinkListener {
 

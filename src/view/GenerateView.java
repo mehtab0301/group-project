@@ -5,6 +5,7 @@ import interface_adapter.generate.GenerateState;
 import interface_adapter.generate.GenerateViewModel;
 
 import javax.swing.*;
+import javax.swing.border.TitledBorder;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.event.HyperlinkEvent;
@@ -16,6 +17,8 @@ import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.io.IOException;
+import java.awt.Color;
+import java.awt.Font;
 
 public class GenerateView extends JPanel implements ActionListener, PropertyChangeListener, ChangeListener {
     public final String viewName = "generate";
@@ -55,6 +58,9 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         this.generateController = controller;
         this.generateViewModel = generateViewModel;
         generateViewModel.addPropertyChangeListener(this);
+        this.setBackground(new Color(213, 249,121));
+        this.setForeground(new Color(22,23,46));
+        this.setFont(new Font("Poppins", Font.BOLD, 13));
 
         // Title for the pop-up
         JLabel title = new JLabel(GenerateViewModel.TITLE_LABEL);
@@ -77,8 +83,12 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
 
         genre = new JComboBox(genreList);
 
+        JLabel genreLabel = new JLabel(GenerateViewModel.GENRE_LABEL);
+        genreLabel.setFont(new Font("Poppins", Font.BOLD, 13));
+        genreLabel.setForeground(new Color(22,23,46));
         JPanel genreBox = new JPanel();
-        genreBox.add(new JLabel(GenerateViewModel.GENRE_LABEL));
+        genreBox.add(genreLabel);
+        genreBox.setBackground(new Color(169, 245,180));
         genreBox.add(genre);
         genreBox.setAlignmentX(Component.CENTER_ALIGNMENT);
 
@@ -105,6 +115,10 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
 
         // Popularity Index Slider
         popularity.setBorder(BorderFactory.createTitledBorder("Choose desired Popularity index:"));
+        popularity.setForeground(new Color(22,23,46));
+        popularity.setFont(new Font("Poppins", Font.BOLD, 13));
+        popularity_index.setForeground(new Color(22,23,46));
+        popularity_index.setFont(new Font("Poppins", Font.BOLD, 13));
         popularity.setMinorTickSpacing(1);
         popularity.setMajorTickSpacing(10);
         popularity.setPaintTicks(true);
@@ -115,6 +129,8 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     @Override
                     public void stateChanged(ChangeEvent e) {
                         popularity_index.setText("value of Popularity chosen is = " + popularity.getValue());
+                        popularity_index.setForeground(new Color(22,23,46));
+                        popularity_index.setFont(new Font("Poppins", Font.BOLD, 13));
                         selectedPopularityLevel = popularity.getValue();
 
                         GenerateState currentState = generateViewModel.getState();
@@ -126,10 +142,15 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         );
 
         popularity_index.setText("value of Popularity chosen is = " + popularity.getValue());
+        popularity_index.setForeground(new Color(22,23,46));
         popularity_index.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Danceability Index Slider
         danceability.setBorder(BorderFactory.createTitledBorder("Choose desired Danceability index:"));
+        danceability.setForeground(new Color(22,23,46));
+        danceability.setFont(new Font("Poppins", Font.BOLD, 13));
+        danceability_index.setForeground(new Color(22,23,46));
+        danceability_index.setFont(new Font("Poppins", Font.BOLD, 13));
         java.util.Hashtable labelTable = new java.util.Hashtable();
         labelTable.put(100, new JLabel("1.0"));
         labelTable.put(75, new JLabel("0.75"));
@@ -149,6 +170,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                         danceability_index.setText("value of Danceability chosen is = " +
                                 (double) danceability.getValue() / 100);
                         selectedDanceability = danceability.getValue();
+                        danceability_index.setForeground(new Color(169, 245,180));
 
                         GenerateState currentState = generateViewModel.getState();
                         float danceabilitySelected = danceability.getValue() * 0.01F;
@@ -159,6 +181,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         );
 
         danceability_index.setText("value of Danceability chosen is = " + (double) danceability.getValue() / 100);
+        danceability_index.setForeground(new Color(22,23,46));
         danceability_index.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Valence Index Slider
@@ -167,6 +190,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         valence.setMajorTickSpacing(10);
         valence.setLabelTable(labelTable);
         valence.setPaintTicks(true);
+        valence.setFont(new Font("Poppins", Font.BOLD, 13));
         valence.setPaintLabels(true);
 
         valence.addChangeListener(
@@ -175,6 +199,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     public void stateChanged(ChangeEvent e) {
                         valence_index.setText("value of Valence chosen is = " + (double) valence.getValue() / 100);
                         selectedValence = valence.getValue();
+                        valence_index.setForeground(new Color(169, 245,180));
 
                         GenerateState currentState = generateViewModel.getState();
                         float valenceSelected = valence.getValue() * 0.01F;
@@ -185,12 +210,15 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         );
 
         valence_index.setText("value of Valence chosen is = " + (double) valence.getValue() / 100);
+        valence_index.setFont(new Font("Poppins", Font.BOLD, 13));
+        valence_index.setForeground(new Color(22,23,46));
         valence_index.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Speechiness Index Slider
         speechiness.setBorder(BorderFactory.createTitledBorder("Choose desired Speechiness index:"));
         speechiness.setMinorTickSpacing(1);
         speechiness.setMajorTickSpacing(10);
+        speechiness.setFont(new Font("Poppins", Font.BOLD, 13));
         speechiness.setLabelTable(labelTable);
         speechiness.setPaintTicks(true);
         speechiness.setPaintLabels(true);
@@ -203,6 +231,7 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                                 (double) speechiness.getValue() / 100);
                         selectedSpeechiness = speechiness.getValue();
 
+
                         GenerateState currentState = generateViewModel.getState();
                         float speechinessSelected = speechiness.getValue() * 0.01F;
                         currentState.setSpeechiness(speechinessSelected);
@@ -212,11 +241,17 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         );
 
         speechiness_index.setText("value of Speechiness chosen is = " + (double) speechiness.getValue() / 100);
+        speechiness_index.setForeground(new Color(22,23,46));
+        speechiness_index.setFont(new Font("Poppins", Font.BOLD, 13));
         speechiness_index.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Energy Index Slider
-        energy.setBorder(BorderFactory.createTitledBorder("Choose desired Energy index:"));
+        TitledBorder energyIndex = BorderFactory.createTitledBorder("Choose desired Energy index:");
+        energyIndex.setTitleColor(new Color(22,23,46));
+        energy.setFont(new Font("Poppins", Font.BOLD, 13));
+        energy.setBorder(energyIndex);
         energy.setMinorTickSpacing(1);
+        energy.setForeground(new Color(22,23,46));
         energy.setMajorTickSpacing(10);
         energy.setLabelTable(labelTable);
         energy.setPaintTicks(true);
@@ -227,7 +262,9 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
                     @Override
                     public void stateChanged(ChangeEvent e) {
                         energy_index.setText("value of Energy chosen is = " + (double) energy.getValue() / 100);
+                        energy_index.setForeground(new Color(22,23,46));
                         selectedEnergy = energy.getValue();
+
 
                         GenerateState currentState = generateViewModel.getState();
                         float energySelected = energy.getValue() * 0.01F;
@@ -238,17 +275,24 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
         );
 
         energy_index.setText("value of Energy chosen is = " + (double) energy.getValue() / 100);
+        energy_index.setForeground(new Color(22,23,46));
+        energy_index.setFont(new Font("Poppins", Font.BOLD, 13));
         energy_index.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         // Input field for user to enter number of tracks they want in the playlist
-        LabelTextPanel numTracks = new LabelTextPanel(new JLabel(GenerateViewModel.NUM_TACKS_LABEL), numTracksField);
+        JLabel trackNumLabel = new JLabel(GenerateViewModel.NUM_TACKS_LABEL);
+        trackNumLabel.setForeground(new Color(22,23,46));
+        trackNumLabel.setBackground(new Color(213, 249,121));
+        LabelTextPanel numTracks = new LabelTextPanel(trackNumLabel, numTracksField);
+        numTracks.setBackground(new Color(169, 245,180));
+        numTracks.setForeground(new Color(22,23,46));
         numTracks.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         final Boolean[] isButtonClickedTracks = {false};
         numTracksField.addKeyListener(
                 new KeyListener() {
                     @Override
-                    public void keyTyped(KeyEvent e) {
+                    public void keyTyped(KeyEvent  e) {
                         GenerateState currentState = generateViewModel.getState();
                         int numberOfTracks = Integer.valueOf(numTracksField.getText() + e.getKeyChar());
                         currentState.setNumberOfTracks(numberOfTracks);
@@ -274,7 +318,11 @@ public class GenerateView extends JPanel implements ActionListener, PropertyChan
 
         // Button for generating the playlist
         JPanel buttons = new JPanel();
+        buttons.setForeground(new Color(22,23,46));
+        buttons.setBackground(new Color(213, 249,121));
         generate = new JButton(GenerateViewModel.GENERATE_BUTTON_LABEL);
+        generate.setForeground(new Color(22,23,46));
+        generate.setBackground(new Color(213, 249,121));
         buttons.add(generate);
 
         generate.addActionListener(
