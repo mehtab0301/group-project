@@ -3,7 +3,6 @@ package view;
 import interface_adapter.login.LoginController;
 import interface_adapter.login.LoginState;
 import interface_adapter.login.LoginViewModel;
-import interface_adapter.signup.SignupViewModel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,8 +12,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
-import java.awt.Color;
-import java.awt.Font;
 
 public class LoginView extends JPanel implements ActionListener, PropertyChangeListener {
     public final String viewName = "log in";
@@ -28,38 +25,19 @@ public class LoginView extends JPanel implements ActionListener, PropertyChangeL
     private final LoginController loginController;
 
     public LoginView(LoginViewModel loginViewModel, LoginController loginController) {
-        this.setBackground(new Color(22,23,46));
         this.loginController = loginController;
         this.loginViewModel = loginViewModel;
         this.loginViewModel.addPropertyChangeListener(this);
 
         JLabel title = new JLabel(LoginViewModel.TITLE_LABLE);
         title.setAlignmentX(Component.CENTER_ALIGNMENT);
-        title.setForeground(new Color(213, 249,121));
-        title.setFont(new Font("Poppins", Font.BOLD, 15));
-        this.setBackground(new Color(22,23,46));
 
-        JLabel usernameLabel = new JLabel(SignupViewModel.USERNAME_LABEL);
-        usernameLabel.setForeground(new Color(169, 245,180));
-        usernameLabel.setFont(new Font("Poppins", Font.BOLD, 15));
-
-        LabelTextPanel usernameInfo = new LabelTextPanel(usernameLabel, usernameInputField);
+        LabelTextPanel usernameInfo = new LabelTextPanel(new JLabel(LoginViewModel.USERNAME_LABEL), usernameInputField);
         usernameInfo.setAlignmentX(CENTER_ALIGNMENT);
-        usernameInfo.setBackground(new Color(22,23,46));
-
-        JLabel passwordLabel = new JLabel(SignupViewModel.PASSWORD_LABEL);
-        passwordLabel.setForeground(new Color(213, 249,121));
-        passwordLabel.setFont(new Font("Poppins", Font.BOLD, 15));
-
-
-        LabelTextPanel passwordInfo = new LabelTextPanel(passwordLabel, passwordInputField);
+        LabelTextPanel passwordInfo = new LabelTextPanel(new JLabel(LoginViewModel.PASSWORD_LABEL), passwordInputField);
         passwordInfo.setAlignmentX(CENTER_ALIGNMENT);
-        passwordInfo.setBackground(new Color(22,23,46));
-
 
         JPanel buttons = new JPanel();
-        buttons.setBackground(new Color(22,23,46));
-        buttons.setForeground(new Color(169, 245,180));
         logIn = new JButton(LoginViewModel.LOGIN_BUTTON_LABEL);
         buttons.add(logIn);
 

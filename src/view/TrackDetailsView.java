@@ -11,9 +11,6 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.util.List;
-import java.awt.Color;
-import java.awt.Font;
-
 
 public class TrackDetailsView extends JPanel implements ActionListener, PropertyChangeListener {
 
@@ -33,9 +30,6 @@ public class TrackDetailsView extends JPanel implements ActionListener, Property
         trackDetailsViewModel.addPropertyChangeListener(this);
         this.viewManagerModel = viewManagerModel;
         this.menuView = menuView;
-        this.setBackground(new Color(22,23,46));
-        this.setForeground(new Color(213, 249,121));
-
 
         back = new JButton("Back");
         back.setAlignmentX(Component.CENTER_ALIGNMENT);
